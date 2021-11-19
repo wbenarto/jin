@@ -1,83 +1,78 @@
 import { useState, useEffect, FunctionComponent} from 'react'
-import styles from '../styles/Content.module.scss'
+// import '../styles/Content.module.css'
+import styles from '../styles/Content.module.css'
 
 const Content = () => {
 
     return (
         <div className={styles.container}>
-                <div className={styles.galleryItem}>
+                <div className={[styles.galleryItem, styles.w_3, styles.h_2].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/1.jpg' className='img1' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/1.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+                <div className={[styles.galleryItem, styles.w_1, styles.h_2].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/2.jpeg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/4.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+                
+                <div className={[styles.galleryItem, styles.w_1, styles.h_5].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/3.jpeg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/7.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+                <div className={[styles.galleryItem, styles.w_3, styles.h_4].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/4.jpg' className='img5' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/2.jpeg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+              
+                <div className={[styles.galleryItem, styles.w_2, styles.h_3].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/5.jpg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/5.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+                <div className={[styles.galleryItem, styles.w_1, styles.h_3].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/6.jpg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/6.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+  
+                <div className={[styles.galleryItem, styles.w_1, styles.h_2].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/7.jpg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/8.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+                <div className={[styles.galleryItem, styles.w_1, styles.h_2 ].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/8.jpg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/9.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
+                <div className={[styles.galleryItem, styles.w_1, styles.h_3].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/9.jpg' className='img3' alt='san francisco golden gate bridge' ></img>
+                    <img src='/images/10.jpg' alt='san francisco golden gate bridge' ></img>
                     </div>
-                    <div className={styles.text}>Example Text</div>
+                    {/* <div className={styles.text}>Example Text</div> */}
                 </div>
-                <div className={styles.galleryItem}>
-                    <div className={styles.image}>
-                    <img src='/images/10.jpg' className='img3' alt='san francisco golden gate bridge' ></img>
-                    </div>
-                    <div className={styles.text}>Example Text</div>
-                </div>
-                {/* <a href='/images/1.jpg' className={styles.imageGallery} ></a>
-                <a href='/images/1.jpg' className='img2'></a>
-                <a href='/images/1.jpg' className={styles.imageGallery}></a>
-                <a href='images/1.jpg' className='img4'></a>
-                <img src='/images/1.jpg' className='img1' alt='san francisco golden gate bridge' ></img>
-                <img src='/images/1.jpg' className='img2' alt='san francisco golden gate bridge' ></img>
-                <img src='/images/1.jpg' className='img1' alt='san francisco golden gate bridge' ></img>
-                <img src='/images/1.jpg' className='img2 img3' alt='san francisco golden gate bridge' ></img> */}
  
+                <div className={[styles.galleryItem, styles.w_1, styles.h_1].join(' ')}>
+                    <div className={styles.image}>
+                    <img src='/images/3.jpeg' alt='san francisco golden gate bridge' ></img>
+                    </div>
+                    {/* <div className={styles.text}>Example Text</div> */}
+                </div>
+
              
-         <h1 className={styles.h1}>
-          {/* Welcome to <a href="https://nextjs.org">Jin's Page!</a> */}
-        </h1>
+         
         </div>
     )
 }

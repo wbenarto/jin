@@ -3,24 +3,24 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.scss'
 
-const NavItem: FunctionComponent<{
-   active: string
-   setActive: Function
-   name: string
-   route: string
-}> = ({ active, setActive, name, route }) => {
-   return active !== name ? (
-      <Link href={route}>
-         <a>
-            <span
-               className=''
-               onClick={() => setActive(name)}>
-               {name}
-            </span>
-         </a>
-      </Link>
-   ) : null
-}
+// const NavItem: FunctionComponent<{
+//    active: string
+//    setActive: Function
+//    name: string
+//    route: string
+// }> = ({ active, setActive, name, route }) => {
+//    return active !== name ? (
+//       <Link href={route}>
+//          <a>
+//             <span
+//                className=''
+//                onClick={() => setActive(name)}>
+//                {name}
+//             </span>
+//          </a>
+//       </Link>
+//    ) : null
+// }
 
 const Navbar = () => {
    const { pathname } = useRouter()
@@ -37,36 +37,43 @@ const Navbar = () => {
    return (
       <div className={styles.container}>
          <span className={styles.logo}>
-            {/* {active} */}
-            <span>JIN CHOI</span>PHOTOGRAPHY
+            <Link  href='/'><span>JIN CHOI</span>PHOTOGRAPHY</Link>
+         </span>
+
+         <div className={styles.navLinks}>
+            <Link href='/portraits' />
+         </div>
+         {/* <span className={styles.logo}>
+        
+            <NavItem active={active} setActive={setActive} name='home' route='/'><span>JIN CHOI</span>PHOTOGRAPHY </NavItem>
          </span>
 
          <div className={styles.navLinks}>
             <NavItem
                active={active}
                setActive={setActive}
-               name='journals'
-               route='/'
+               name='portraits'
+               route='/portraits'
             />
             <NavItem
                active={active}
                setActive={setActive}
                name='weddings'
-               route='/resume'
+               route='/weddings'
             />
             <NavItem
                active={active}
                setActive={setActive}
                name='graduations'
-               route='/projects'
+               route='/graduations'
             />
              <NavItem
                active={active}
                setActive={setActive}
-               name='portraits'
-               route='/projects'
+               name='events'
+               route='/events'
             />
-         </div>
+         </div> */}
       </div>
    )
 }

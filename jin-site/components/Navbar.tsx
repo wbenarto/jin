@@ -37,11 +37,33 @@ const Navbar = () => {
    return (
       <div className={styles.container}>
          <span className={styles.logo}>
-            <Link  href='/'><span>JIN CHOI</span>PHOTOGRAPHY</Link>
+            <Link  href='/'><p><span>JIN CHOI</span>PHOTOGRAPHY</p></Link>
          </span>
 
          <div className={styles.navLinks}>
-            <Link href='/portraits' />
+         <div className={styles.navLink}>
+            <Link href='/products'>
+               <a>Products</a>    
+            </Link>
+            </div>
+              
+            <div className={styles.navLink}>
+            <Link href='/travel'>
+               <a>TRAVEL</a>    
+            </Link>
+            </div>
+            <div className={styles.navLink}>
+            <Link href='/portraits'>
+               <a>Portraits</a>    
+            </Link>
+            </div>
+            
+            <div className={styles.jin}>
+            <Link href='/contact'>
+               <a>Contact</a>    
+            </Link>
+            </div>
+         
          </div>
          {/* <span className={styles.logo}>
         

@@ -4,11 +4,12 @@
 $font: Bebas Neue;
 
 .container {
-  width: 100vw;
+  width:100%;
+  overflow: hidden;
   height: 100px;
   background-color: white;
   display: flex;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   justify-content: space-between;
@@ -17,16 +18,26 @@ $font: Bebas Neue;
 
 .navLinks {
   padding: 10px;
-  font-size: 14px;
+  font-size: 18px;
   margin: 15px 40px 15px 0px;
   align-items: center;
   display: flex;
   width: 40%;
   color: $primary;
-  justify-content: flex-end;
+  justify-content: space-between;
   letter-spacing: 5px;
-  > a {
-    padding-left: 20px;
+  
+  
+}
+
+.navLink {
+
+  padding: 5px;
+  text-align: center;
+
+  
+  &:active {
+    background-color: pink;
   }
 }
 
@@ -40,8 +51,14 @@ $font: Bebas Neue;
   margin: 15px 40px;
   letter-spacing: 5px;
   font-weight: 500;
+  cursor: pointer;
 
-  > span {
-    color: $primary;
+  >P {
+
+    > span {
+    
+      color: $primary;
+    }
   }
+
 }

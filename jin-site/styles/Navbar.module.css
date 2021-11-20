@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .container {
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
   height: 100px;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   -webkit-box-pack: justify;
@@ -17,7 +18,7 @@
 
 .navLinks {
   padding: 10px;
-  font-size: 14px;
+  font-size: 18px;
   margin: 15px 40px 15px 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -27,14 +28,19 @@
   display: flex;
   width: 40%;
   color: #e56020;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   letter-spacing: 5px;
 }
 
-.navLinks > a {
-  padding-left: 20px;
+.navLink {
+  padding: 5px;
+  text-align: center;
+}
+
+.navLink:active {
+  background-color: pink;
 }
 
 .logo {
@@ -52,9 +58,10 @@
   margin: 15px 40px;
   letter-spacing: 5px;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.logo > span {
+.logo > P > span {
   color: #e56020;
 }
 /*# sourceMappingURL=Navbar.module.css.map */

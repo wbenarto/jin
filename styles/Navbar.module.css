@@ -5,7 +5,6 @@
   width: 100vw;
   overflow: hidden;
   height: 100px;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +41,7 @@
 }
 
 .navLink > a {
+  color: black;
   font-weight: 100;
   font-size: .8rem;
 }
@@ -70,5 +70,20 @@
 
 .logo > P > span {
   color: #e56020;
+}
+
+.banner {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+}
+
+.banner > img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=Navbar.module.css.map */

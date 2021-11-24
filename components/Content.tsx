@@ -30,9 +30,9 @@ const Content = () => {
             animate='animate'
             initial="initial"
             variants={container}className={styles.container}>
-                <motion.div variants={item} className={[styles.galleryItem, styles.w_7, styles.h_1].join(' ')}>
+                <motion.div variants={item} className={[styles.galleryItem, styles.w_7, styles.h_2].join(' ')}>
                     <div className={styles.image}>
-                    <img src='/images/sunset.jpg' alt='san francisco from treasure island' ></img>
+                    <img src='/images/travel/citynight.jpg' alt='san francisco from treasure island' ></img>
                     </div>
                     {/* <div className={styles.text}>Example Text</div> */}
                 </motion.div>

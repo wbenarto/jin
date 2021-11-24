@@ -2,6 +2,7 @@ import { useState, useEffect, FunctionComponent } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.scss'
+import styles2 from '../styles/Content.module.scss'
 
 // const NavItem: FunctionComponent<{
 //    active: string
@@ -36,6 +37,9 @@ const Navbar = () => {
 
    return (
       <div className={styles.container}>
+         <div className={styles.banner} >
+            <img src='/images/sunset.jpg' alt='sunset'></img>
+         </div>
          <span className={styles.logo}>
             <Link  href='/'><p><span>JIN CHOI</span>VISUALS</p></Link>
          </span>

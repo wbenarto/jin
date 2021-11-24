@@ -6,8 +6,12 @@ const Contact = () => {
         <div > 
 
             <Navbar />
-            <div className={styles.container}>
+            <div className={styles.contactContainer}>
             <h1>Contact page under construction</h1>
+
+            <div className={styles.image}>
+            <img  src='/images/jin.webp'></img>
+            </div>
             </div>
         
         </div>

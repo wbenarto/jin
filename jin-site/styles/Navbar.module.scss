@@ -1,10 +1,10 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap');
 
-$font: Bebas Neue;
 
+$navbarFont: Montserrat;
 .container {
-  width:100%;
+  width:100vw;
   overflow: hidden;
   height: 100px;
   background-color: white;
@@ -13,7 +13,7 @@ $font: Bebas Neue;
   top: 0;
   left: 0;
   justify-content: space-between;
-  font-family: $font;
+  font-family: $navbarFont;
 }
 
 .navLinks {
@@ -26,8 +26,7 @@ $font: Bebas Neue;
   color: $primary;
   justify-content: space-between;
   letter-spacing: 5px;
-  
-  
+
 }
 
 .navLink {
@@ -35,9 +34,13 @@ $font: Bebas Neue;
   padding: 5px;
   text-align: center;
 
-  
+
+  >a {
+    font-weight:100;
+    font-size: .8rem;
+  }
   &:active {
-    background-color: pink;
+    border-bottom: 2px solid black;
   }
 }
 

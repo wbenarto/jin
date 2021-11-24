@@ -1,7 +1,5 @@
 import {useEffect} from 'react'
 import Navbar from '../components/Navbar'
-import '../styles/content.module.css'
-
 import styles2 from '../styles/Content.module.css'
 
 //Scroll Observer

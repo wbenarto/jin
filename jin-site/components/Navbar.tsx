@@ -43,7 +43,7 @@ const Navbar = () => {
          <div className={styles.navLinks}>
          <div className={styles.navLink}>
             <Link href='/products'>
-               <a>Products</a>    
+               <a>PRODUCTS</a>    
             </Link>
             </div>
               
@@ -54,13 +54,13 @@ const Navbar = () => {
             </div>
             <div className={styles.navLink}>
             <Link href='/portraits'>
-               <a>Portraits</a>    
+               <a>PORTRAITS</a>    
             </Link>
             </div>
             
-            <div className={styles.jin}>
+            <div className={styles.navLink}>
             <Link href='/contact'>
-               <a>Contact</a>    
+               <a>CONTACT</a>    
             </Link>
             </div>
          

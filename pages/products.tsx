@@ -1,5 +1,6 @@
 import {useEffect} from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 import styles2 from '../styles/Content.module.css'
 
@@ -131,7 +132,8 @@ useEffect(() => {
             
             </motion.div>
             
-            </motion.div>         
+            </motion.div>      
+            <Footer />   
         </main>
     )
 }

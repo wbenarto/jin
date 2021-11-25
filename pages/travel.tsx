@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import styles2 from '../styles/Content.module.css'
+import Footer from '../components/Footer'
 
 //Scroll Observer
 import { useInView } from "react-intersection-observer"
@@ -137,10 +138,9 @@ const item = {
                 variants={item} className={[styles2.galleryItem, styles2.w_4, styles2.h_1].join(' ')}>            
             <div className={styles2.image}> <img src='/images/travel/citynight.jpg' alt='tuna nigiri'></img></div>
             </motion.div>
-            
-         
-            
-            </motion.div>         
+
+            </motion.div>        
+            <Footer /> 
         </main>
        
     )

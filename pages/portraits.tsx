@@ -1,5 +1,6 @@
 import {useEffect} from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import styles2 from '../styles/Content.module.css'
 
 //Scroll Observer
@@ -76,7 +77,8 @@ useEffect(() => {
             
             </motion.div>
             
-            </motion.div>         
+            </motion.div>     
+            <Footer />    
         </main>
        
     )

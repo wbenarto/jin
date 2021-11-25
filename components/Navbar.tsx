@@ -37,9 +37,9 @@ const Navbar = () => {
 
    return (
       <div className={styles.container}>
-         <div className={styles.banner} >
+         {/* <div className={styles.banner} >
             <img src='/images/sunset.jpg' alt='sunset'></img>
-         </div>
+         </div> */}
          <span className={styles.logo}>
             <Link  href='/'><p><span>JIN CHOI</span>VISUALS</p></Link>
          </span>

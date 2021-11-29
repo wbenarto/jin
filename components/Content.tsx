@@ -29,7 +29,7 @@ const Content = () => {
         <motion.div 
             animate='animate'
             initial="initial"
-            variants={container}className={styles.container}>
+            variants={container} className={styles.container}>
                 <motion.div variants={item} className={[styles.galleryItem, styles.w_7, styles.h_2].join(' ')}>
                     <div className={styles.image}>
                     <img src='/images/travel/citynight.jpg' alt='san francisco from treasure island' ></img>

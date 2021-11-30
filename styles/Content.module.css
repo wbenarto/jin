@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap");
 .container {
   width: 100%;
   overflow: hidden;
@@ -159,20 +161,32 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
+  margin: 40px 0px;
 }
 
-.contactContainer > h1 {
+.contactContainer > h3 {
   letter-spacing: 15px;
+  color: #e56020;
+  margin-bottom: 40px;
 }
 
-.contactContainer > p {
-  color: black;
-  line-height: 40px;
+.imageContact > img {
+  width: 400px;
 }
 
 .textBox {
-  min-width: 700px;
-  position: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.textBox > p {
+  margin: 20px 400px;
+  color: black;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 /*# sourceMappingURL=Content.module.css.map */

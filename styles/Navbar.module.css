@@ -46,7 +46,8 @@
   font-size: .8rem;
 }
 
-.navLink:active {
+.navLink > a:hover {
+  font-weight: 800;
   border-bottom: 2px solid black;
 }
 

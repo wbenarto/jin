@@ -50,7 +50,6 @@
   display: flex;
   right: 40px;
   position: absolute;
-  padding: 20px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -62,10 +61,8 @@
 
 .footerIcons > div {
   padding: 10px;
-  border: 2px solid black;
   color: #e56020;
   margin: 10px;
-  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

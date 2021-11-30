@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&display=swap');
+@import 'variables';
 
-$thirdFont : Roboto, sans-serif;
 
 .container {
   // background-color: pink;
@@ -11,7 +11,6 @@ $thirdFont : Roboto, sans-serif;
   grid-auto-rows: 200px 300px;
   grid-gap: 5px;
   grid-auto-flow: dense;
-
 }
 
 
@@ -128,21 +127,34 @@ $thirdFont : Roboto, sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: $thirdFont;
+  font-family: $navbarFont;
+  margin: 40px 0px;
 
-  >h1 {
+  >h3 {
     letter-spacing: 15px;
+    color: $primary;
+    margin-bottom: 40px;
   }
-  >p {
-    color: black;
 
-    line-height: 40px;
+
+}
+
+.imageContact {
+  >img {
+    width: 400px;
   }
 
 }
 
 .textBox {
-  min-width: 700px;
-  position: flex;
-
+  // background-color: pink;
+  display: flex;
+  color: black;
+  margin-bottom: 40px;
+  >p {
+    margin: 20px 400px;
+    color: black;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
 }

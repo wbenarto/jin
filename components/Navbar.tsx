@@ -41,7 +41,7 @@ const Navbar = () => {
             <img src='/images/sunset.jpg' alt='sunset'></img>
          </div> */}
          <span className={styles.logo}>
-            <Link  href='/'><p><span>JIN CHOI</span>VISUALS</p></Link>
+            <Link  href='/'><p><span>JIN</span>CHOI</p></Link>
          </span>
 
          <div className={styles.navLinks}>

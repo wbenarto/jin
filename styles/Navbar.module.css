@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
 .container {
   width: 100%;
   overflow: hidden;
@@ -14,7 +12,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: Montserrat;
+  font-family: Sansita;
 }
 
 .navLinks {
@@ -35,22 +33,6 @@
   letter-spacing: 5px;
 }
 
-.navLink {
-  padding: 5px;
-  text-align: center;
-}
-
-.navLink > a {
-  color: black;
-  font-weight: 100;
-  font-size: .8rem;
-}
-
-.navLink > a:hover {
-  font-weight: 800;
-  border-bottom: 2px solid black;
-}
-
 .logo {
   color: black;
   font-size: 38px;
@@ -65,12 +47,27 @@
   display: flex;
   margin: 15px 40px;
   letter-spacing: 5px;
-  font-weight: 500;
   cursor: pointer;
 }
 
 .logo > P > span {
   color: #e56020;
+}
+
+.navLink {
+  padding: 5px;
+  text-align: center;
+}
+
+.navLink > a {
+  color: black;
+  font-weight: 100;
+  font-size: .8rem;
+}
+
+.navLink > a:hover {
+  font-weight: 800;
+  border-bottom: 2px solid black;
 }
 
 .banner {

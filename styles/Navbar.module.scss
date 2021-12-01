@@ -1,9 +1,4 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap');
-
-
-$navbarFont: Montserrat;
-
 .container {
   width:100%;
   overflow: hidden;
@@ -14,7 +9,7 @@ $navbarFont: Montserrat;
   top: 0;
   left: 0;
   justify-content: space-between;
-  font-family: $navbarFont;
+  font-family: $primaryFont;
 }
 
 .navLinks {
@@ -27,6 +22,29 @@ $navbarFont: Montserrat;
   color: $primary;
   justify-content: space-between;
   letter-spacing: 5px;
+
+}
+
+
+.logo {
+  color: black;
+  font-size: 38px;
+  // background-color: blue;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 15px 40px;
+  letter-spacing: 5px;
+
+  cursor: pointer;
+
+  >P {
+
+    > span {
+    
+      color: $primary;
+    }
+  }
 
 }
 
@@ -48,27 +66,6 @@ $navbarFont: Montserrat;
   }
 }
 
-.logo {
-  color: black;
-  font-size: 38px;
-  // background-color: blue;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: 15px 40px;
-  letter-spacing: 5px;
-  font-weight: 500;
-  cursor: pointer;
-
-  >P {
-
-    > span {
-    
-      color: $primary;
-    }
-  }
-
-}
 
 
 .banner {

@@ -115,6 +115,43 @@
     top: 50%;
   }
 }
+// Portraits
+
+.portraitContainer {
+  width: 100%;
+  // background-color: pink;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+  font-family: $navbarFont;
+  
+}
+
+.portraits {
+  max-width: 80%;
+  height: 100%;
+  margin: 60px 0;
+  // max-width: 2000px;
+  // max-height: 1300px;
+  overflow: hidden;
+  
+ 
+}
+
+.portraitContent {
+
+  width: 100%;
+  > img {
+    width: 100%;
+  
+     margin: auto;
+     object-fit: cover;
+     display: flex;
+   }
+}
 
 
 

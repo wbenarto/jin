@@ -51,21 +51,75 @@ useEffect(() => {
             <motion.div 
                 animate='animate'
                 initial="initial"
-                variants={container} className={styles2.container}>
-
-            {/* images */}
-            <motion.div 
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>            
-            <div className={styles2.image}> <img src='/images/portraits/goride.jpg' alt='tuna nigiri'></img></div>
-            </motion.div>
-
-            <motion.div 
-                variants={item} className={[styles2.galleryItem, styles2.w_3, styles2.h_4].join(' ')}>       
-                <div className={styles2.image}><img className={styles2.image} src='/images/portraits/boynton.jpg' alt='tuna nigiri'></img></div>     
+                variants={container} 
+                className={styles2.portraitContainer}>
+            <h2>PORTRAITS</h2>
             
+
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}
+                >    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/alika1.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}
+                >    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/alika2.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}>    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/alika3.jpg' alt='tuna nigiri'></img>
+                </div>        
             </motion.div>
 
             <motion.div 
+                variants={item} 
+                className={styles2.portraits}>    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/boynton.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}>    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/boynton2.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}>    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/parisha.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}>    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/webe.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+            <motion.div 
+                variants={item} 
+                className={styles2.portraits}
+                >    
+                <div className={styles2.portraitContent}>           <img src='/images/portraits/goride.jpg' alt='tuna nigiri'></img>
+                </div>        
+            </motion.div>
+
+
+            {/* <motion.div 
+                variants={item} 
+                className={styles2.portraits}
+                // className={[styles2.galleryItem, styles2.w_3, styles2.h_4].join(' ')}
+                >       
+              <img className={styles2.image} src='/images/portraits/boynton.jpg' alt='tuna nigiri'></img>
+            
+            </motion.div> */}
+
+            {/* <motion.div 
                 variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
                     <div className={styles2.image}><img src='/images/portraits/webe.jpg' alt='tuna nigiri'></img></div>            
             
@@ -75,7 +129,7 @@ useEffect(() => {
                 variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}> 
                 <div className={styles2.image}><img src='/images/portraits/parisha.jpg' alt='tuna nigiri'></img></div>           
             
-            </motion.div>
+            </motion.div> */}
             
             </motion.div>     
             <Footer />    

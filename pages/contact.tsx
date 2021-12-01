@@ -4,17 +4,17 @@ import Footer from '../components/Footer'
 
 const Contact = () => {
 
-    async function handleOnSubmit(e) {
-        e.preventDefault();
-        const formData = {}
+    // async function handleOnSubmit(e) {
+    //     e.preventDefault();
+    //     const formData = {}
 
-        Array.from(e.currentTarget.elements).forEach(field => {
-            if (!field.name) return;
-            formData[field.name] = field.value;
-        })
+    //     Array.from(e.currentTarget.elements).forEach(field => {
+    //         if (!field.name) return;
+    //         formData[field.name] = field.value;
+    //     })
 
-        console.log(formData)
-    }
+    //     console.log(formData)
+    // }
 
     return (
         <main > 

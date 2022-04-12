@@ -229,4 +229,9 @@
   font-size: 1.4rem;
   line-height: 2.4rem;
 }
+
+.heroContainer {
+  height: 150vh;
+  background-color: transparent;
+}
 /*# sourceMappingURL=Content.module.css.map */

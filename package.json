@@ -5,7 +5,8 @@
     "dev": "(if exist .next rd /s /q .next 2>nul) && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scss": "node-sass --watch styles/scss -o styles/css"
   },
   "dependencies": {
     "framer-motion": "^5.3.1",

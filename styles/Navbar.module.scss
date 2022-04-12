@@ -1,9 +1,9 @@
 @import 'variables';
 .container {
-  width:100%;
+  width:100vw;
   overflow: hidden;
   height: 100px;
-  // background-color: white;
+  background-color: rgba(0, 0 ,0 , 0.3);
   display: flex;
   position: relative;
   top: 0;
@@ -27,7 +27,7 @@
 
 
 .logo {
-  color: black;
+  color: white;
   font-size: 38px;
   // background-color: blue;
   align-items: center;
@@ -55,7 +55,7 @@
 
 
   >a {
-    color: black;
+    color: white;
     font-weight:100;
     font-size: .8rem;
 

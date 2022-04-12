@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
 .container {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   height: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +35,7 @@
 }
 
 .logo {
-  color: black;
+  color: white;
   font-size: 38px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -60,7 +61,7 @@
 }
 
 .navLink > a {
-  color: black;
+  color: white;
   font-weight: 100;
   font-size: .8rem;
 }

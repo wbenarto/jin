@@ -3,7 +3,6 @@
 
 
 .container {
-  // background-color: pink;
   width: 100%;
   overflow: hidden;
   display: grid;
@@ -11,6 +10,7 @@
   grid-auto-rows: 200px 300px;
   grid-gap: 5px;
   grid-auto-flow: dense;
+  background-color: black;
 }
 
 
@@ -201,4 +201,40 @@
 .heroContainer {
   height: 150vh;
   background-color: transparent;
+}
+
+.y1Image {
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.y2Image {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0 ;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.heroQuote {
+  color: white;
+  padding: 50px;
+  background: rgba(0,0,0,0.2);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  right: 0; 
+  position: absolute;
+
+  @media screen and (max-width: 600px) {
+    font-size: .5em;
+    width: 300px;
+    top: 30%;
+  }
 }

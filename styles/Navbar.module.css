@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 .container {
   width: 100vw;
   overflow: hidden;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +14,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: Sansita;
+  font-family: Poiret One;
+  z-index: 1;
 }
 
 .navLinks {
@@ -68,7 +70,6 @@
 
 .navLink > a:hover {
   font-weight: 800;
-  border-bottom: 2px solid black;
 }
 
 .banner {

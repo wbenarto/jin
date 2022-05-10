@@ -3,13 +3,14 @@
   width:100vw;
   overflow: hidden;
   height: 100px;
-  background-color: rgba(0, 0 ,0 , 0.3);
+  background-color: transparent;
   display: flex;
   position: relative;
   top: 0;
   left: 0;
   justify-content: space-between;
   font-family: $primaryFont;
+  z-index: 1;
 }
 
 .navLinks {
@@ -61,7 +62,7 @@
 
     &:hover{
       font-weight: 800;
-      border-bottom: 2px solid black;
+
     }
   }
 }

@@ -18,7 +18,7 @@ const Box = () => {
 const Hero = () => {
 
     const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [0, 500, 1000], [0, 400, 800]);
+    const y1 = useTransform(scrollY, [0, 900, 1000], [0, 300, 800]);
     const y2 = useTransform(scrollY, [0, 500, 1000], [0, 300, 350]);
     const y3 = useTransform(scrollY, [0, 500, 1000], [100, 600, 1200])
     // const scale = useTransform(scrollY, [0, 500, 1000], [1, 1, 1.1]);
@@ -27,14 +27,14 @@ const Hero = () => {
     return (
         <div className={styles.heroContainer} >
             <motion.div style={{ y: y1, }}>
-                <img style={{ overflow: 'hidden', zIndex: '-1', position: 'absolute', width: '100%', top: '0' }} src='/images/snowmountain.jpg' />
+                <img className={styles.y1Image} src='/images/snowmountain.jpg' />
 
             </motion.div>
             <motion.div style={{ y: y2 }}>
-                <img style={{ overflow: 'hidden', position: 'absolute', width: '100%', top: '0' }} src='/parallax/layer2.png' />
+                <img className={styles.y2Image} src='/parallax/layer2.png' />
             </motion.div>
 
-            <motion.div style={{ color: 'white', padding: '50px', y: y3, background: 'rgba(0,0,0,0.2)', width: "500px", display: 'flex', flexDirection: 'column', right: '0', position: 'absolute' }}>
+            <motion.div style={{ y: y3 }} className={styles.heroQuote}>
                 <h1>CAPTURING MOMENTS</h1>
                 <h2>IN LIFE</h2>
             </motion.div>

@@ -233,7 +233,7 @@
 }
 
 .heroContainer {
-  height: 150vh;
+  height: 85vh;
   background-color: transparent;
 }
 
@@ -253,6 +253,7 @@
   position: absolute;
   width: 100%;
   top: 0;
+  z-index: 3;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -260,8 +261,6 @@
 
 .heroQuote {
   color: white;
-  padding: 50px;
-  background: rgba(0, 0, 0, 0.2);
   width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,8 +269,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  right: 0;
+  margin-left: 50%;
+  z-index: 1;
+  text-align: center;
   position: absolute;
+  font-family: Poiret One;
 }
 
 @media screen and (max-width: 600px) {

@@ -12,12 +12,14 @@
   grid-gap: 5px;
   grid-auto-flow: dense;
   background-color: black;
+  z-index: 3;
 }
 
 .galleryItem {
   width: 100%;
   height: 100%;
   position: relative;
+  padding: 20px;
 }
 
 .galleryItem .image {
@@ -237,6 +239,15 @@
   background-color: transparent;
 }
 
+.heroContainerShadow {
+  width: 100%;
+  background-color: linear-gradient(#e66465, #9198e5);
+  z-index: 15;
+  position: absolute;
+  height: 110vh;
+  top: 0;
+}
+
 .y1Image {
   overflow: hidden;
   z-index: -1;
@@ -253,7 +264,7 @@
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: 3;
+  z-index: 0;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -282,5 +293,39 @@
     width: 300px;
     top: 30%;
   }
+}
+
+.socialsContainer {
+  width: 40px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  margin-right: 40px;
+  top: 45vh;
+  position: fixed;
+  z-index: 5;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icons {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.icons:hover {
+  font-weight: 400;
+  color: #5f5642;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Content.module.css.map */

@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
+import Socials from '../components/Socials'
 import { url } from 'inspector'
 import background from '../public/images/city.jpg'
 const Home: NextPage = () => {
@@ -16,10 +17,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-
       <Navbar />
       <Hero />
+      <Socials />
       <Content />
       <Footer />
 

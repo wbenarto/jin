@@ -18,7 +18,7 @@ const Box = () => {
 const Hero = () => {
 
     const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [-100, 0, 150, 200, 300], [10, -100, 50, 100, 150]);
+    const y1 = useTransform(scrollY, [-100, 0, 10, 100, 150, 200, 300], [-110, -100, -90, -70, 20, 100, 150]);
     const y2 = useTransform(scrollY, [0, 0], [0, 0]);
     const y3 = useTransform(scrollY, [0, 150, 200, 300], [150, 230, 290, 350])
     // const scale = useTransform(scrollY, [0, 500, 1000], [1, 1, 1.1]);
@@ -26,6 +26,7 @@ const Hero = () => {
 
     return (
         <div className={styles.heroContainer} >
+
             <motion.div style={{ y: y1, }}>
                 <img className={styles.y1Image} src='/images/snowmountain.jpg' />
 
@@ -35,8 +36,8 @@ const Hero = () => {
             </motion.div>
 
             <motion.div style={{ y: y3 }} className={styles.heroQuote}>
-                <h1>JIN CHOI</h1>
-                <h1>Photography</h1>
+                {/* <h1>JIN CHOI</h1>
+                <h1>Photography</h1> */}
             </motion.div>
 
             {/* <img src='/images/snowmountain.jpg' style={{ zIndex: '-1', top: '0', position: 'absolute', width: '100%', height: '100%', }}>

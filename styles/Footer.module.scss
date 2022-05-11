@@ -7,6 +7,7 @@
     // background-color:blue;
     border-top: 2px solid $primary;
     // font-family: $thirdFont;
+    background-color: black;
     display: flex;
     flex-direction: row;
     // justify-content: center;
@@ -25,6 +26,7 @@
     // background-color: pink;
     display: flex;
     align-items: center;
+    color: white;
     >span {
         color: $primary;
     }

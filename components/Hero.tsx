@@ -26,6 +26,7 @@ const Hero = () => {
 
     return (
         <div className={styles.heroContainer} >
+            <div className={styles.bottomFade}></div>
 
             <motion.div style={{ y: y1, }}>
                 <img className={styles.y1Image} src='/images/snowmountain.jpg' />

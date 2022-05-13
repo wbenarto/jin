@@ -305,7 +305,8 @@
 .bottomFade {
   width: 100%;
   bottom: 0;
-  height: 80vh;
+  height: 80%;
+  left: 0;
   z-index: 2;
   position: absolute;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), color-stop(19%, rgba(0, 0, 0, 0.938)), color-stop(34%, rgba(0, 0, 0, 0.541)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(0, 0, 0, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.002)), to(transparent));
@@ -406,8 +407,8 @@
 }
 
 .midLink {
-  width: 240px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
   background-color: pink;
   margin: 20px 60px;
 }
@@ -418,6 +419,19 @@
     height: 200px;
     margin: 10px;
   }
+}
+
+.midLink:hover {
+  cursor: pointer;
+}
+
+.midLinkPic {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 40%;
+     object-position: 40%;
 }
 
 .shortBio {

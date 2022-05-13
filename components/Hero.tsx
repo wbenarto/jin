@@ -26,14 +26,14 @@ const Hero = () => {
 
     return (
         <div className={styles.heroContainer} >
-            <div className={styles.bottomFade}></div>
-
             <motion.div className={styles.parallaxLayer} style={{ y: y1, }}>
                 <img className={styles.y1Image} src='/images/snowmountain.jpg' />
 
             </motion.div>
             <motion.div className={styles.parallaxLayer} style={{ y: y2 }}>
+                <div className={styles.bottomFade}></div>
                 <img className={styles.y2Image} src='/parallax/layer2.png' />
+
             </motion.div>
 
             {/* <motion.div style={{ y: y3 }} className={styles.heroQuote}>

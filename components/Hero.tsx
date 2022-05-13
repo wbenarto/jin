@@ -18,8 +18,8 @@ const Box = () => {
 const Hero = () => {
 
     const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [-100, 0, 10, 100, 150, 200, 300], [-110, -100, -90, -70, 20, 100, 150]);
-    const y2 = useTransform(scrollY, [0, 0], [0, 0]);
+    const y1 = useTransform(scrollY, [-100, 0, 10, 100, 150, 200, 300], [-100, -20, -20, 40, 100, 150, 200]);
+    const y2 = useTransform(scrollY, [-100, 0], [-100, -20]);
     const y3 = useTransform(scrollY, [0, 150, 200, 300], [150, 230, 290, 350])
     // const scale = useTransform(scrollY, [0, 500, 1000], [1, 1, 1.1]);
 
@@ -28,18 +28,18 @@ const Hero = () => {
         <div className={styles.heroContainer} >
             <div className={styles.bottomFade}></div>
 
-            <motion.div style={{ y: y1, }}>
+            <motion.div className={styles.parallaxLayer} style={{ y: y1, }}>
                 <img className={styles.y1Image} src='/images/snowmountain.jpg' />
 
             </motion.div>
-            <motion.div style={{ y: y2 }}>
+            <motion.div className={styles.parallaxLayer} style={{ y: y2 }}>
                 <img className={styles.y2Image} src='/parallax/layer2.png' />
             </motion.div>
 
-            <motion.div style={{ y: y3 }} className={styles.heroQuote}>
-                {/* <h1>JIN CHOI</h1>
-                <h1>Photography</h1> */}
-            </motion.div>
+            {/* <motion.div style={{ y: y3 }} className={styles.heroQuote}>
+                <h1>JIN CHOI</h1>
+                <h1>Photography</h1>
+            </motion.div> */}
 
             {/* <img src='/images/snowmountain.jpg' style={{ zIndex: '-1', top: '0', position: 'absolute', width: '100%', height: '100%', }}>
             </img> */}

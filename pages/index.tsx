@@ -23,10 +23,10 @@ const Home: NextPage = () => {
       <Navbar />
       <Hero />
       <MidNav />
-      <ShortBio />
+      {/* <ShortBio /> */}
 
-      <Content />
-      <Footer />
+      {/* <Content /> */}
+      {/* <Footer /> */}
       <Socials />
 
 

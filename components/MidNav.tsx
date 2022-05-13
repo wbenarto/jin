@@ -10,7 +10,7 @@ const MidNav = () => {
                     <img className={styles.midLinkPic} src='images/jin-dj.JPG' />
                 </div>
                 <div className={styles.midLink}>
-                    <img className={styles.midLinkPic} src='images/jin2.JPG' />
+                    <img className={styles.midLinkPic} src='images/jin2.jpg' />
 
                 </div>
                 <div className={styles.midLink}>

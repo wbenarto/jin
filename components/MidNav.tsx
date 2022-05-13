@@ -4,7 +4,7 @@ const MidNav = () => {
     return (
         <div className={styles.midNav}>
             <p>
-                ok gitu
+                ok gitu esdgsklgjsklgjldfj
             </p>
         </div>
     )

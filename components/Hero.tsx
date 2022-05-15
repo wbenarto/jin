@@ -18,7 +18,7 @@ const Box = () => {
 const Hero = () => {
 
     const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [-100, 0, 10, 100, 150, 200, 300], [-100, -20, -20, 40, 100, 150, 200]);
+    const y1 = useTransform(scrollY, [0, 10, 100, 150, 200, 300], [-20, -20, 40, 100, 150, 200]);
     const y2 = useTransform(scrollY, [-100, 0], [-100, -20]);
     const y3 = useTransform(scrollY, [0, 150, 200, 300], [150, 230, 290, 350])
     // const scale = useTransform(scrollY, [0, 500, 1000], [1, 1, 1.1]);

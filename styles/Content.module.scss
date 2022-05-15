@@ -216,7 +216,7 @@
   display: block;
   position: absolute;
   width: 100%;
-  height: 110%;
+  height: 100%;
   overflow: hidden;
 }
 .y1Image {
@@ -304,6 +304,7 @@
 .midNav {
   padding: 0;
   margin: 0;
+  top: 0;
   width: 100%;
   height: 800px;
   background-color: black;

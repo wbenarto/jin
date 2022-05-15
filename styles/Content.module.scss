@@ -216,7 +216,8 @@
   display: block;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 120vh;
+
   overflow: hidden;
 }
 .y1Image {
@@ -265,7 +266,7 @@
 .bottomFade {
   width: 100%;
   bottom: 0;
-  height: 80%;
+  height: 100%;
   left: 0;
   z-index: 2;
   position: absolute;
@@ -286,6 +287,7 @@
   z-index: 5;
   transform: translate(0, -50%);
   justify-content: center;
+
 }
 
 .icons {
@@ -293,6 +295,9 @@
   color: #ffffff;
   margin-bottom: 15px;
 
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
   &:hover{
     font-weight: 400;
     color: $shade;
@@ -304,7 +309,6 @@
 .midNav {
   padding: 0;
   margin: 0;
-  top: 0;
   width: 100%;
   height: 800px;
   background-color: black;
@@ -342,11 +346,11 @@
 .midLink {
   width: 360px;
   height: 460px;
-  background-color: pink;
+  // background-color: pink;
   margin: 20px 60px;
 
-  @media screen and (max-width: 475px) {
-    width: 100px;
+  @media screen and (max-width: 900px) {
+    width: 100%;
     height: 200px;
     margin: 10px;
   }

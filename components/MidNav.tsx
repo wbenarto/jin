@@ -11,33 +11,36 @@ const MidNav = () => {
 
                 <Link href='https://soundcloud.com/djinn415'>
                     <div className={styles.midLink}>
-                        <div className={styles.bottomFade}></div>
+                        <div className={styles.fullFade}></div>
                         <img className={styles.midLinkPic} src='images/jin-dj.JPG' />
                         <div className={styles.overlay}>
-                            <div className={styles.text}>DJ Jinn</div>
+
                         </div>
+                        <div className={styles.text}>DJ Jinn</div>
                     </div>
 
                 </Link>
 
                 <Link href='/products'>
                     <div className={styles.midLink}>
-                        <div className={styles.bottomFade}></div>
+                        <div className={styles.fullFade}></div>
                         <img className={styles.midLinkPic} src='images/jin2.jpg' />
                         <div className={styles.overlay}>
-                            <div className={styles.text}>PHOTOGRAPHY PORTFOLIO</div>
+
                         </div>
+                        <div className={styles.text}>PHOTOGRAPHY PORTFOLIO</div>
                     </div>
 
                 </Link>
 
                 <Link href='/about'>
                     <div className={styles.midLink}>
-                        <div className={styles.bottomFade}></div>
+                        <div className={styles.fullFade}></div>
                         <img className={styles.midLinkPic} src='images/sunset.jpg' />
                         <div className={styles.overlay}>
-                            <div className={styles.text}>Hello World</div>
+
                         </div>
+                        <div className={styles.text}>Hello World</div>
                     </div>
                 </Link>
 

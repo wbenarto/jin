@@ -284,6 +284,16 @@
   position: absolute;
   background: linear-gradient(to bottom, black 1%, rgba(0, 0, 0, 0.938) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
 }
+
+.fullFade {
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 3%, rgba(0, 0, 0, 0.45) 19%, rgba(0, 0, 0, 0.45) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+}
 // Socials SideBar
 .socialsContainer {
   width:40px;
@@ -387,7 +397,7 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background: linear-gradient(to bottom, black 2%, rgba(0, 0, 0, 0.58) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.38) 95.2%, rgba(0, 0, 0, 0.802) 98.2%,  rgba(0, 0, 0, 0.802) 98.2%);
+  background:rgba(0, 0, 0, 0.65);
 }
 
 .midLink:hover .overlay {
@@ -397,23 +407,31 @@
 .text {
   color: white;
   font-size:2rem;
-  position: absolute;
-  top: 50%;
+  position: relative;
+  padding-top: 60px;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  transition: all .3s cubic-bezier(0.7, 0, 0.3, 1);
   text-align: center;
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;
   }
 }
+.midLink:hover .text{
+  bottom:50%;
+  transition: all .3s cubic-bezier(0.7, 0, 0.3, 1);
+
+}
 
 .midLinkPic {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
   object-position:  40% ;
 }
 

@@ -332,6 +332,17 @@
   background: linear-gradient(to bottom, black 1%, rgba(0, 0, 0, 0.938) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
 }
 
+.fullFade {
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(0, 0, 0, 0.45)), color-stop(19%, rgba(0, 0, 0, 0.45)), color-stop(34%, rgba(0, 0, 0, 0.45)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(0, 0, 0, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.002)), to(transparent));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 3%, rgba(0, 0, 0, 0.45) 19%, rgba(0, 0, 0, 0.45) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+}
+
 .socialsContainer {
   width: 40px;
   height: 250px;
@@ -467,8 +478,7 @@
   opacity: 0;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, black), color-stop(19%, rgba(0, 0, 0, 0.58)), color-stop(34%, rgba(0, 0, 0, 0.541)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(0, 0, 0, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.38)), color-stop(98.2%, rgba(0, 0, 0, 0.802)), color-stop(98.2%, rgba(0, 0, 0, 0.802)));
-  background: linear-gradient(to bottom, black 2%, rgba(0, 0, 0, 0.58) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.38) 95.2%, rgba(0, 0, 0, 0.802) 98.2%, rgba(0, 0, 0, 0.802) 98.2%);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .midLink:hover .overlay {
@@ -478,11 +488,14 @@
 .text {
   color: white;
   font-size: 2rem;
-  position: absolute;
-  top: 50%;
+  position: relative;
+  padding-top: 60px;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
   text-align: center;
 }
 
@@ -490,6 +503,12 @@
   .text {
     font-size: 1rem;
   }
+}
+
+.midLink:hover .text {
+  bottom: 50%;
+  -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .midLinkPic {

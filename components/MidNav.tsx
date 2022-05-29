@@ -7,7 +7,7 @@ const MidNav = () => {
         <div className={styles.midNav}>
             <img className={styles.midBackground} src='/images/sand-1.png' />
             <div className={styles.midLinks}>
-                {/* <div className={styles.bottomFade} /> */}
+
 
                 <Link href='https://soundcloud.com/djinn415'>
                     <div className={styles.midLink}>

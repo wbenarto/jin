@@ -354,7 +354,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   right: 0;
-  margin-right: 40px;
+  margin-right: 20px;
   top: 45vh;
   position: fixed;
   z-index: 5;
@@ -366,7 +366,7 @@
 }
 
 .icons {
-  font-size: 40px;
+  font-size: 32px;
   color: #ffffff;
   margin-bottom: 15px;
 }
@@ -379,7 +379,7 @@
 
 .icons:hover {
   font-weight: 400;
-  color: #5f5642;
+  color: #e56020;
   cursor: pointer;
 }
 

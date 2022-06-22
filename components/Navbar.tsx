@@ -2,104 +2,38 @@ import { useState, useEffect, FunctionComponent } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.scss'
-import styles2 from '../styles/Content.module.scss'
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
-// const NavItem: FunctionComponent<{
-//    active: string
-//    setActive: Function
-//    name: string
-//    route: string
-// }> = ({ active, setActive, name, route }) => {
-//    return active !== name ? (
-//       <Link href={route}>
-//          <a>
-//             <span
-//                className=''
-//                onClick={() => setActive(name)}>
-//                {name}
-//             </span>
-//          </a>
-//       </Link>
-//    ) : null
-// }
+import styles2 from '../styles/Content.module.scss'
 
 const Navbar = () => {
    const { pathname } = useRouter()
+   const { scrollY } = useViewportScroll();
+   const y1 = useTransform(scrollY, [0, 50, 100, 150, 200, 300], [350, 350, 250, 150, 0, 0]);
+   const x1 = useTransform(scrollY, [0, 50, 300], [250, 200, 0])
 
-   const [active, setActive] = useState('')
-
-   //later
-   useEffect(() => {
-      // if (pathname === '/') setActive('About')
-      // else if (pathname === '/projects') setActive('Projects')
-      // else if (pathname === '/resume') setActive('Resume')
-   }, [])
-
+   const y2 = useTransform(scrollY, [0, 300, 400], [0, 0, -800])
    return (
       <div className={styles.container}>
-         {/* <div className={styles.banner} >
-            <img src='/images/sunset.jpg' alt='sunset'></img>
-         </div> */}
-         <span className={styles.logo}>
-            <Link href='/'><p><span>JIN</span>CHOI</p></Link>
-         </span>
+         <motion.div className={styles.logo} style={{ y: y1, x: x1 }}>
+            <Link href='/'><p>JIN<span>CHOI</span></p></Link>
 
-         {/* <div className={styles.navLinks}>
-         <div className={styles.navLink}>
-            <Link href='/products'>
-               <a>PRODUCTS</a>    
-            </Link>
-            </div>
-              
-            <div className={styles.navLink}>
-            <Link href='/travel'>
-               <a>TRAVEL</a>    
-            </Link>
-            </div>
-            <div className={styles.navLink}>
-            <Link href='/portraits'>
-               <a>PORTRAITS</a>    
-            </Link>
-            </div>
-            
-            <div className={styles.navLink}>
-            <Link href='/contact'>
-               <a>CONTACT</a>    
-            </Link>
-            </div>
-         
-         </div> */}
-         {/* <span className={styles.logo}>
-        
-            <NavItem active={active} setActive={setActive} name='home' route='/'><span>JIN CHOI</span>PHOTOGRAPHY </NavItem>
-         </span>
+            <motion.h1 animate={{
+               scale: [1, 2, 2, 1, 1],
+               rotate: [0, 0, 270, 360, 0],
+            }}
+               transition={{
+                  duration: 2,
+                  ease: "easeInOut",
+                  times: [0, 0.2, 0.5, 0.8, 1],
+                  repeat: Infinity,
+                  repeatDelay: 1
+               }}
+               style={{ y: y2 }}
+               className={styles.logoNav}>PHOTOGRAPHY</motion.h1>
+            {/* <h1 className={styles.logoNav}>MUSIC</h1> */}
+         </motion.div>
 
-         <div className={styles.navLinks}>
-            <NavItem
-               active={active}
-               setActive={setActive}
-               name='portraits'
-               route='/portraits'
-            />
-            <NavItem
-               active={active}
-               setActive={setActive}
-               name='weddings'
-               route='/weddings'
-            />
-            <NavItem
-               active={active}
-               setActive={setActive}
-               name='graduations'
-               route='/graduations'
-            />
-             <NavItem
-               active={active}
-               setActive={setActive}
-               name='events'
-               route='/events'
-            />
-         </div> */}
       </div>
    )
 }

@@ -18,6 +18,13 @@
   z-index: 4;
 }
 
+@media screen and (max-width: 1076px) {
+  .container {
+    margin-left: -200px;
+    margin-top: -250px;
+  }
+}
+
 .navLinks {
   padding: 10px;
   font-size: 18px;
@@ -38,7 +45,7 @@
 
 .logo {
   color: white;
-  font-size: 38px;
+  font-size: 46px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -48,6 +55,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   letter-spacing: 5px;
   position: fixed;
@@ -55,8 +66,27 @@
   cursor: pointer;
 }
 
+.logo > h1 {
+  font-size: 54px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo > h1 {
+    font-size: 32px;
+  }
+}
+
+.logo > P {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
 .logo > P > span {
   color: #e56020;
+}
+
+.logoNav {
+  margin-top: 0;
 }
 
 .navLink {

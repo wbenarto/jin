@@ -12,7 +12,7 @@ const Navbar = () => {
    const y1 = useTransform(scrollY, [0, 200, 400, 550, 600, 700], [300, 350, 0, 0, 0, 0]);
    const x1 = useTransform(scrollY, [0, 50, 300], [0, 0, 0])
 
-   const y2 = useTransform(scrollY, [0, 300, 400], [0, -500, -800])
+   const y2 = useTransform(scrollY, [0, 300, 600], [0, 0, -600])
    return (
       <div className={styles.container}>
          <motion.div className={styles.logo} style={{ y: y1, x: x1 }}>

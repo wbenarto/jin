@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
 .container {
   width: 100%;
   overflow: hidden;
@@ -16,13 +16,6 @@
           justify-content: space-between;
   font-family: Poiret One;
   z-index: 4;
-}
-
-@media screen and (max-width: 1076px) {
-  .container {
-    margin-left: -200px;
-    margin-top: -250px;
-  }
 }
 
 .navLinks {
@@ -66,22 +59,34 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 32px;
+  }
+}
+
 .logo > h1 {
-  font-size: 54px;
+  font-size: 20px;
+  z-index: 9;
+  margin-left: -30px;
 }
 
 @media screen and (max-width: 768px) {
   .logo > h1 {
-    font-size: 32px;
+    font-size: 12px;
   }
 }
 
 .logo > P {
   margin-bottom: 0px;
   padding-bottom: 0px;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 3%;
 }
 
 .logo > P > span {
+  z-index: 7;
   color: #e56020;
 }
 

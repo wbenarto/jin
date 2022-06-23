@@ -289,6 +289,36 @@
   }
 }
 
+
+.heroFooter {
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  color: #dde9eb;
+  text-align: right;
+  margin-right: 20px;
+
+  >p {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    font-family: $navbarFont;
+
+    @media screen and (max-width: 768px) {
+      font-size: .8rem;
+    }
+
+  }
+}
+
 .bottomFade {
   width: 100%;
   bottom: 0;
@@ -375,7 +405,8 @@
 .midBackground {
   max-width: 1200px;
   width: 100%;
-  height: 400px;
+  min-height: 400px;
+  height: 700px;
   position: absolute;
   object-fit: cover;
   z-index: 1;
@@ -388,25 +419,28 @@
   max-width: 1500px;
   width: 100%;
   height: 500px;
-  // background-color: pink;
+
   z-index: 2;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 20px;
 }
 
 .midLink {
-  width: 360px;
-  height: 460px;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 20px;
+  height: 300px;
   position: relative;
   // background-color: pink;
-  margin: 20px 60px;
 
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    height: 200px;
-    margin: 10px;
+
+  @media screen and (max-width: 478px) {
+    width: 100px;
+    height: 150px;
+    margin: 0 10px;
   }
 
   &:hover {
@@ -433,10 +467,11 @@
 }
 
 .text {
-  color: white;
-  font-size: 2rem;
+  color: #dde9eb;
+  font-size: 1rem;
   position: relative;
   padding-top: 60px;
+  letter-spacing: 1px;
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -446,7 +481,8 @@
   text-align: center;
 
   @media screen and (max-width: 768px) {
-    font-size: 1rem;
+    font-size: .6rem;
+    padding-top: 40px;
   }
 }
 
@@ -532,6 +568,6 @@
 
   @media screen and (max-width: 978px) {
     padding: 10px 40px;
-    font-size: .8srem;
+    font-size: .8rem;
   }
 }

@@ -1,0 +1,50 @@
+@import 'variables';
+
+.banner {
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+        height: 30vh;
+    }
+
+}
+
+.bannerImage {
+    width: 100%;
+    object-fit: cover;
+}
+
+.bannerLogo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    border-radius: 50%;
+
+    @media screen and (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+    }
+}
+
+.musicContent {
+    color: white;
+    margin: 100px 20px;
+    font-family: $secondaryFont;
+
+    >h1 {
+        margin: 0;
+    }
+
+    >h2 {
+        color: gray;
+        margin: 0;
+    }
+}

@@ -1,6 +1,7 @@
 import styles from '../styles/Content.module.css'
 import Link from 'next/link'
-
+import Image from 'next/image'
+// https://soundcloud.com/djinn415
 
 const MidNav = () => {
     return (
@@ -9,7 +10,7 @@ const MidNav = () => {
             <div className={styles.midLinks}>
 
 
-                <Link href='https://soundcloud.com/djinn415'>
+                <Link href='/music'>
                     <div className={styles.midLink}>
                         <div className={styles.fullFade}></div>
                         <img className={styles.midLinkPic} src='images/jin-dj.JPG' />
@@ -21,7 +22,7 @@ const MidNav = () => {
 
                 </Link>
 
-                <Link href='/products'>
+                <Link href='/photography'>
                     <div className={styles.midLink}>
                         <div className={styles.fullFade}></div>
                         <img className={styles.midLinkPic} src='images/jin2.jpg' />

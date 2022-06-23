@@ -16,7 +16,7 @@ const MidNav = () => {
                         <div className={styles.overlay}>
 
                         </div>
-                        <div className={styles.text}>DJ JINN -></div>
+                        <div className={styles.text}>DJ JINN </div>
                     </div>
 
                 </Link>
@@ -28,7 +28,7 @@ const MidNav = () => {
                         <div className={styles.overlay}>
 
                         </div>
-                        <div className={styles.text}>PHOTOGRAPHY PORTFOLIO -></div>
+                        <div className={styles.text}>PHOTOGRAPHY PORTFOLIO</div>
                     </div>
 
                 </Link>
@@ -40,7 +40,7 @@ const MidNav = () => {
                         <div className={styles.overlay}>
 
                         </div>
-                        <div className={styles.text}>ABOUT -></div>
+                        <div className={styles.text}>ABOUT</div>
                     </div>
                 </Link>
 

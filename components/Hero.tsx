@@ -18,7 +18,7 @@ const Box = () => {
 const Hero = () => {
 
     const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [0, 10, 100, 150, 200, 300], [-20, -20, 40, 100, 150, 200]);
+    const y1 = useTransform(scrollY, [0, 50, 100, 150, 200, 300, 400, 450], [-20, 0, 80, 120, 180, 280, 380, 400]);
     const y2 = useTransform(scrollY, [-100, 0], [-100, -20]);
     const y3 = useTransform(scrollY, [0, 150, 200, 300], [150, 230, 290, 350])
     // const scale = useTransform(scrollY, [0, 500, 1000], [1, 1, 1.1]);
@@ -35,7 +35,9 @@ const Hero = () => {
                 <img className={styles.y2Image} src='/parallax/layer2.png' />
 
             </motion.div>
-
+            <div className={styles.heroFooter}>
+                <p>Bay Area photographer and DJ</p>
+            </div>
             {/* <motion.div style={{ y: y3 }} className={styles.heroQuote}>
                 <h1>JIN CHOI</h1>
                 <h1>Photography</h1>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
 .body {
   padding: 0;
   margin: 0;
@@ -310,6 +310,36 @@
   }
 }
 
+.heroFooter {
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #dde9eb;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.heroFooter > p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  font-family: Montserrat;
+}
+
+@media screen and (max-width: 768px) {
+  .heroFooter > p {
+    font-size: .8rem;
+  }
+}
+
 .bottomFade {
   width: 100%;
   bottom: 0;
@@ -412,7 +442,8 @@
 .midBackground {
   max-width: 1200px;
   width: 100%;
-  height: 400px;
+  min-height: 400px;
+  height: 700px;
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -446,20 +477,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 20px;
 }
 
 .midLink {
-  width: 360px;
-  height: 460px;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 20px;
+  height: 300px;
   position: relative;
-  margin: 20px 60px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 478px) {
   .midLink {
-    width: 100%;
-    height: 200px;
-    margin: 10px;
+    width: 100px;
+    height: 150px;
+    margin: 0 10px;
   }
 }
 
@@ -486,10 +519,11 @@
 }
 
 .text {
-  color: white;
-  font-size: 2rem;
+  color: #dde9eb;
+  font-size: 1rem;
   position: relative;
   padding-top: 60px;
+  letter-spacing: 1px;
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -501,7 +535,8 @@
 
 @media screen and (max-width: 768px) {
   .text {
-    font-size: 1rem;
+    font-size: .6rem;
+    padding-top: 40px;
   }
 }
 
@@ -601,7 +636,7 @@
 @media screen and (max-width: 978px) {
   .bioText {
     padding: 10px 40px;
-    font-size: .8srem;
+    font-size: .8rem;
   }
 }
 /*# sourceMappingURL=Content.module.css.map */

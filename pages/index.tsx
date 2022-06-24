@@ -10,6 +10,7 @@ import styles from '../styles/Content.module.scss'
 import ShortBio from '../components/ShortBio'
 import { url } from 'inspector'
 import background from '../public/images/city.jpg'
+
 const Home: NextPage = () => {
 
   return (

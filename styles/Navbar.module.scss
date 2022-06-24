@@ -54,7 +54,7 @@
   >h1 {
     font-size: 20px;
     z-index: 9;
-    margin-left: -30px;
+
 
     @media screen and (max-width: 768px) {
       font-size: 12px;
@@ -63,7 +63,6 @@
 
   >P {
 
-    margin-bottom: 0px;
     padding-bottom: 0px;
     z-index: 10;
     padding: 10px;
@@ -82,6 +81,7 @@
 
 .logoNav {
   margin-top: 0;
+  text-align: center;
 
 }
 
@@ -116,4 +116,72 @@
     object-fit: cover;
 
   }
+}
+
+// MenuNav
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+}
+
+
+.iconPlaceholder {
+  width: 40px;
+  height: 100%;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+
+.textPlaceholder {
+  border-radius: 5px;
+  width: 20px;
+  height: 100%;
+  padding: 10px;
+  flex: 1;
+}
+
+.menuNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  z-index: 4;
+}
+
+.navButton {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 40;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.navUl {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+}
+
+.navLi {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }

@@ -36,13 +36,12 @@
   .bannerLogo {
     width: 100px;
     height: 100px;
-    bottom: -50px;
   }
 }
 
 .musicContent {
   color: white;
-  margin: 100px 20px;
+  margin: 40px;
   font-family: Roboto;
 }
 
@@ -53,5 +52,9 @@
 .musicContent > h2 {
   color: gray;
   margin: 0;
+}
+
+.socialLinks a:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=Music.module.css.map */

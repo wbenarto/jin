@@ -3,9 +3,9 @@
 .container {
   width: 100%;
   height: 80px;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   border-top: 2px solid #e56020;
-  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,12 +22,21 @@
   padding: 10px 40px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px 0px;
+  }
+}
+
 .footerSection {
-  width: 30%;
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -42,15 +51,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .footerSection {
+    text-align: center;
+    font-size: .8em;
+  }
 }
 
 .footerIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  right: 40px;
   position: absolute;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -91,5 +108,11 @@
 .footerIcons > div:hover {
   color: white;
   background-color: #e56020;
+}
+
+@media screen and (max-width: 768px) {
+  .footerIcons > div {
+    padding: 0px;
+  }
 }
 /*# sourceMappingURL=Footer.module.css.map */

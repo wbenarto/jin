@@ -3,25 +3,28 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.scss'
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { MenuNav } from '../components/MenuNav'
 
 import styles2 from '../styles/Content.module.scss'
 
 const Navbar = () => {
    const { pathname } = useRouter()
    const { scrollY } = useViewportScroll();
-   const y1 = useTransform(scrollY, [0, 200, 400, 550, 600, 700], [300, 350, 0, 0, 0, 0]);
+   const y1 = useTransform(scrollY, [0, 200, 400, 550, 600, 700], [300, 300, -20, -20, -20, -20]);
    const x1 = useTransform(scrollY, [0, 50, 300], [0, 0, 0])
 
-   const y2 = useTransform(scrollY, [0, 300, 600], [0, 0, -600])
+   const y2 = useTransform(scrollY, [0, 200, 400, 550], [0, 0, 0, -600])
    return (
       <div className={styles.container}>
+         <MenuNav />
          <motion.div className={styles.logo} style={{ y: y1, x: x1 }}>
             <Link href='/'><p>JIN<span>CHOI</span></p></Link>
 
-            <motion.h1 animate={{
-               scale: [1.5, 1, 1, 1.5, 1.5],
-               rotate: [0, 0, 270, 270, 0],
-            }}
+            <motion.h1
+               // animate={{
+               //    scale: [1.5, 1, 1, 1.5, 1.5],
+               //    rotate: [0, 0, 270, 270, 0],
+               // }}
                transition={{
                   duration: 2,
                   ease: "easeInOut",
@@ -30,11 +33,11 @@ const Navbar = () => {
                   repeatDelay: 1
                }}
                style={{ y: y2 }}
-               className={styles.logoNav}>PHOTOGRAPHY</motion.h1>
+               className={styles.logoNav}>PHOTOGRAPHY <br /> & <br /> MUSIC</motion.h1>
             {/* <h1 className={styles.logoNav}>MUSIC</h1> */}
          </motion.div>
 
-      </div>
+      </div >
    )
 }
 

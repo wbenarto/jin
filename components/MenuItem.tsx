@@ -22,7 +22,7 @@ const variants = {
 
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
-export const MenuItem = ({ i }) => {
+export const MenuItem = ({ i }: any) => {
     const style = { border: `2px solid ${colors[i]}` };
     const links = ['HOME', "MUSIC", "PHOTOGRAPHY", 'ABOUT']
     const link = ['', "music", "photography", 'about']

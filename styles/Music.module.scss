@@ -30,15 +30,16 @@
     @media screen and (max-width: 768px) {
         width: 100px;
         height: 100px;
-        bottom: -50px;
+
     }
 }
 
 .musicContent {
     color: white;
-    margin: 100px 20px;
+    margin: 40px;
     font-family: $secondaryFont;
 
+    // background-color: pink;
     >h1 {
         margin: 0;
     }
@@ -47,4 +48,15 @@
         color: gray;
         margin: 0;
     }
+}
+
+.socialLinks {
+
+    a {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
 }

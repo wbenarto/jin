@@ -4,17 +4,6 @@ import Footer from '../components/Footer'
 
 const About = () => {
 
-    // async function handleOnSubmit(e) {
-    //     e.preventDefault();
-    //     const formData = {}
-
-    //     Array.from(e.currentTarget.elements).forEach(field => {
-    //         if (!field.name) return;
-    //         formData[field.name] = field.value;
-    //     })
-
-    //     console.log(formData)
-    // }
 
     return (
         <main >
@@ -33,23 +22,7 @@ const About = () => {
                 </div>
                 <div>
                     <h2>Email me for inquiries at jchoi775@gmail.com </h2>
-                    {/* <form method='post' onSubmit={handleOnSubmit}>
-                    <p>
-                        <label htmlFor='name'>Name</label>
-                        <input type='text' name='name' />
-                    </p>
-                    <p>
-                        <label htmlFor='email'>Email</label>
-                        <input type='email' name='email' />
-                    </p>
-                    <p>
-                        <label htmlFor='message'>Message</label>
-                        <textarea name='message' />
-                    </p>
-                    <p>
-                        <button>Submit</button>
-                    </p>
-                </form> */}
+
                 </div>
             </div>
             <Footer />

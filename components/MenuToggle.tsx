@@ -12,7 +12,7 @@ const Path = (props: any) => (
     />
 );
 
-export const MenuToggle = ({ toggle }) => (
+export const MenuToggle = ({ toggle }: any) => (
     <button className={styles.navButton} onClick={toggle}>
         <svg width="23" height="23" viewBox="0 0 23 23">
             <Path

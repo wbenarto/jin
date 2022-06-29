@@ -73,7 +73,7 @@
 }
 
 .midContact {
-  width: 100%;
+  width: 100px;
   height: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,6 +85,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   left: 20%;
   font-size: 5rem;
@@ -99,7 +102,6 @@
 
 @media screen and (max-width: 768px) {
   .midContact {
-    width: 300px;
     font-size: 1.5rem;
   }
 }

@@ -47,18 +47,18 @@ const Food = () => {
 
             {/* images */}
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_7, styles2.h_1].join(' ')}>
                 <div className={styles2.image}> <img src='/images/products/bakso.jpg' alt='tuna nigiri'></img></div>
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_3, styles2.h_3].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_4, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img className={styles2.image} src='/images/products/bakso2.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_3, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/baksosatay.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
@@ -72,37 +72,37 @@ const Food = () => {
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_5, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/cucumberbite.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_3, styles2.h_3].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_7, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/dragoncapsule.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/hamachinigiri.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_5, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/salmonkewpie.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
             <motion.div
                 variants={item}
-                className={[styles2.galleryItem, styles2.w_5, styles2.h_3].join(' ')}>
+                className={[styles2.galleryItem, styles2.w_7, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/sashimiplate.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
 
             <motion.div
-                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
+                variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/salmonnigiri.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
@@ -111,14 +111,14 @@ const Food = () => {
 
             <motion.div
                 variants={item}
-                className={[styles2.galleryItem, styles2.w_4, styles2.h_3].join(' ')}>
+                className={[styles2.galleryItem, styles2.w_4, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/spoonful.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>
 
             <motion.div
                 variants={item}
-                className={[styles2.galleryItem, styles2.w_3, styles2.h_3].join(' ')}>
+                className={[styles2.galleryItem, styles2.w_3, styles2.h_1].join(' ')}>
                 <div className={styles2.image}><img src='/images/products/tunatorch.jpg' alt='tuna nigiri'></img></div>
 
             </motion.div>

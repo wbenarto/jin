@@ -76,11 +76,13 @@
 
 
 .midContact {
-    width: 100%;
+    width: 100px;
     height: 140px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    // background-color: pink;
 
     position: absolute;
     left: 20%;
@@ -89,12 +91,20 @@
     z-index: 3;
     font-weight: 500;
 
+    >div {
+        // background-color: cyan;
+    }
+
+    >p {
+        // background-color: blue;
+    }
+
     &:hover {
         cursor: pointer;
     }
 
     @media screen and (max-width: 768px) {
-        width: 300px;
+
         font-size: 1.5rem;
     }
 }

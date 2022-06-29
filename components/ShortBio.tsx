@@ -10,13 +10,13 @@ function ShortBio({ props }: any) {
             <div className={styles.topFade}></div>
             <div className={styles.bottomFade}></div>
             <div className={styles.midImageDiv}>
-                <img className={styles.midImage} src={props == 'photography' ? '/images/jin2.jpg' : 'images/jin-dj.jpg'}></img>
+                <img className={styles.midImage} src={props == 'photography' ? '/images/jin2.jpg' : '/images/jin-dj.jpg'}></img>
             </div>
             <Link href={props == 'photography' ? '/photography' : '/music'}>
                 <div className={styles.midContact}>
 
                     <p className={styles.bioText}>{props == 'photography' ? 'PHOTOGRAPHY' : 'MUSIC'}</p>
-                    <FaArrowRight style={{ fontSize: '40px' }} />
+                    <div><FaArrowRight style={{ fontSize: '40px' }} /></div>
                 </div>
             </Link>
 

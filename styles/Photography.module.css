@@ -31,8 +31,6 @@
 .photographyFilter > button:hover {
   cursor: pointer;
   color: #e56020;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
 }
@@ -40,5 +38,13 @@
 .photographyFilter > button:active {
   border-bottom: 1px white solid;
   color: #e56020;
+}
+
+@media screen and (max-width: 798px) {
+  .photographyFilter > button {
+    font-size: .8rem;
+    margin: 0;
+    margin-top: 60px;
+  }
 }
 /*# sourceMappingURL=Photography.module.css.map */

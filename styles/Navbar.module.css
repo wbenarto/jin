@@ -154,13 +154,17 @@
   background-color: transparent;
 }
 
+.textPlaceholder:hover {
+  cursor: pointer;
+}
+
 .menuNav {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
-  z-index: 4;
+  width: 0px;
+  z-index: 6;
 }
 
 .navButton {
@@ -179,6 +183,10 @@
   border-radius: 50%;
   color: white;
   background: transparent;
+}
+
+.navButton:hover {
+  cursor: pointer;
 }
 
 .navUl {

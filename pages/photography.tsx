@@ -1,17 +1,21 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { MenuNav } from '../components/MenuNav'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Photography.module.css'
 import styles2 from '../styles/Content.module.css'
 
 //Scroll Observer
 import { useInView } from "react-intersection-observer"
 import { useAnimation, motion } from "framer-motion"
 
+import Food from '../components/Food'
+import Travel from '../components/Travel'
+import Portrait from '../components/Portrait'
 
 
 const Photography = () => {
+  const [active, setActive] = useState('food')
 
   const animation = useAnimation()
 
@@ -49,90 +53,18 @@ const Photography = () => {
   return (
     <main>
       <MenuNav />
-      <motion.div
-        animate='animate'
-        initial="initial"
-        variants={container} className={styles2.container}>
+      <div className={styles.photographyFilter}>
+        <button onClick={() => setActive('food')}>FOOD</button>
+        <button onClick={() => setActive('travel')}>LANDSCAPE</button>
+        <button onClick={() => setActive('portrait')}>PORTRAIT</button>
+        {/* <button onClick={() => setActive('wedding')}>WEDDING</button> */}
+      </div>
 
-        {/* images */}
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>
-          <div className={styles2.image}> <img src='/images/products/bakso.jpg' alt='tuna nigiri'></img></div>
-        </motion.div>
+      {active == 'food' ? <Food /> :
+        active == 'travel' ? <Travel /> :
+          active == 'portrait' ? <Portrait /> :
+            <p>AWW</p>}
 
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_3, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img className={styles2.image} src='/images/products/bakso2.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/baksosatay.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_7, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/dessert.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/cucumberbite.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_3, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/dragoncapsule.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/hamachinigiri.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/salmonkewpie.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-        <motion.div
-          variants={item}
-          className={[styles2.galleryItem, styles2.w_5, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/sashimiplate.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item} className={[styles2.galleryItem, styles2.w_2, styles2.h_2].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/salmonnigiri.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-
-
-        <motion.div
-          variants={item}
-          className={[styles2.galleryItem, styles2.w_4, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/spoonful.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-        <motion.div
-          variants={item}
-          className={[styles2.galleryItem, styles2.w_3, styles2.h_3].join(' ')}>
-          <div className={styles2.image}><img src='/images/products/tunatorch.jpg' alt='tuna nigiri'></img></div>
-
-        </motion.div>
-
-      </motion.div>
       <Footer />
     </main>
   )

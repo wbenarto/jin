@@ -23,11 +23,9 @@ const Home: NextPage = () => {
 
       <Navbar />
       <Hero />
-      <MidNav />
-      <ShortBio />
-
-      {/* <Content /> */}
-      {/* <Footer /> */}
+      {/* <MidNav /> */}
+      <ShortBio props={'photography'} />
+      <ShortBio props={'music'} />
       <Socials />
 
 

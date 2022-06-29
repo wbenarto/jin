@@ -129,7 +129,7 @@
   left: 0;
   bottom: 0;
   width: 300px;
-  background: #fff;
+  background: black;
 }
 
 .iconPlaceholder {
@@ -150,6 +150,8 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  color: white;
+  background-color: transparent;
 }
 
 .menuNav {
@@ -175,6 +177,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  color: white;
   background: transparent;
 }
 

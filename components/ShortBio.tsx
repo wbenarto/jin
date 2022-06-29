@@ -1,23 +1,31 @@
-import styles from '../styles/Content.module.scss'
+import styles from '../styles/ShortBio.module.scss'
+import { FaArrowRight } from 'react-icons/fa'
+import Link from 'next/link'
 
-function ShortBio() {
+function ShortBio({ props }: any) {
+    console.log(props)
     return (
+
         <div className={styles.shortBio}>
             <div className={styles.topFade}></div>
             <div className={styles.bottomFade}></div>
             <div className={styles.midImageDiv}>
-                <img className={styles.midImage} src='/images/jin2.jpg'></img>
+                <img className={styles.midImage} src={props == 'photography' ? '/images/jin2.jpg' : 'images/jin-dj.jpg'}></img>
             </div>
-            <div className={styles.midContact}>
+            <Link href={props == 'photography' ? '/photography' : '/music'}>
+                <div className={styles.midContact}>
 
-                <p>jchoi775@gmail.com</p>
-            </div>
-            <div className={styles.bioText}>
+                    <p className={styles.bioText}>{props == 'photography' ? 'PHOTOGRAPHY' : 'MUSIC'}</p>
+                    <FaArrowRight style={{ fontSize: '40px' }} />
+                </div>
+            </Link>
+
+            {/* <div className={styles.bioText}>
                 <p>
                     Available for photography shoot and Live DJ set for your events! Please email for inquiries.
                 </p>
 
-            </div>
+            </div> */}
         </div>
     )
 }

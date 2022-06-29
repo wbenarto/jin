@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { MenuNav } from '../components/MenuNav'
 import styles from '../styles/Home.module.css'
 import styles2 from '../styles/Content.module.css'
 
@@ -47,8 +48,7 @@ const Photography = () => {
   }, [animation, inView])
   return (
     <main>
-      <Navbar />
-
+      <MenuNav />
       <motion.div
         animate='animate'
         initial="initial"

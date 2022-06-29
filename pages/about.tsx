@@ -18,10 +18,11 @@ const About = () => {
                 <div className={styles.textBox}>
                     <p>Jin Choi s a photographer and videographer based in San Francisco, California. With inspiration and creativity at heart, he has a knack for capturing clean, wide open spaces as well as memorable moments.
                         <br />
-                        <br />Available for hire within photography, video and aerial content. </p>
+                        <br />Available for hire within photography, video and dj for your event. </p>
+                    <h2>Email me for inquiries at jchoi775@gmail.com </h2>
                 </div>
                 <div>
-                    <h2>Email me for inquiries at jchoi775@gmail.com </h2>
+
 
                 </div>
             </div>

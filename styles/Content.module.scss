@@ -234,6 +234,7 @@
 .heroContainer {
   height: 100vh;
   overflow: hidden;
+  scroll-snap-align: start;
 
   // background-color: pink;
 }
@@ -531,44 +532,5 @@
   @media screen and (max-width: 768px) {
     width: 300px;
     font-size: 1.5rem;
-  }
-}
-
-// Short bio
-.shortBio {
-
-  width: 100%;
-  left: 0;
-  background-color: black;
-  object-fit: fill;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-
-  >img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-}
-
-.bioText {
-  max-width: 900px;
-  font-size: 1.5rem;
-  z-index: 3;
-  position: absolute;
-  top: 60%;
-  text-align: center;
-  // background-color: purple;
-  font-family: $navbarFont;
-
-
-  @media screen and (max-width: 978px) {
-    padding: 10px 40px;
-    font-size: .8rem;
   }
 }

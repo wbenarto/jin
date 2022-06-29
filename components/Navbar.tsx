@@ -10,7 +10,7 @@ import styles2 from '../styles/Content.module.scss'
 const Navbar = () => {
    const { pathname } = useRouter()
    const { scrollY } = useViewportScroll();
-   const y1 = useTransform(scrollY, [0, 200, 400, 550, 600, 700], [300, 300, -20, -20, -20, -20]);
+   const y1 = useTransform(scrollY, [0, 200, 400, 550, 600, 700], [300, 300, -200, -200, -200, -200]);
    const x1 = useTransform(scrollY, [0, 50, 300], [0, 0, 0])
 
    const y2 = useTransform(scrollY, [0, 200, 400, 550], [0, 0, 0, -600])

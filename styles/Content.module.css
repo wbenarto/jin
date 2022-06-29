@@ -251,6 +251,7 @@
 .heroContainer {
   height: 100vh;
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .parallaxLayer {
@@ -590,54 +591,6 @@
   .midContact {
     width: 300px;
     font-size: 1.5rem;
-  }
-}
-
-.shortBio {
-  width: 100%;
-  left: 0;
-  background-color: black;
-  -o-object-fit: fill;
-     object-fit: fill;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-}
-
-.shortBio > img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.bioText {
-  max-width: 900px;
-  font-size: 1.5rem;
-  z-index: 3;
-  position: absolute;
-  top: 60%;
-  text-align: center;
-  font-family: Montserrat;
-}
-
-@media screen and (max-width: 978px) {
-  .bioText {
-    padding: 10px 40px;
-    font-size: .8rem;
   }
 }
 /*# sourceMappingURL=Content.module.css.map */

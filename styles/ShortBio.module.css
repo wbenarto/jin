@@ -89,7 +89,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 20%;
+  right: 20%;
   font-size: 5rem;
   text-align: center;
   z-index: 3;

@@ -37,7 +37,9 @@
 .musicContent {
     color: white;
     margin: 40px;
+    max-width: 800px;
     font-family: $secondaryFont;
+    line-height: 1.5rem;
 
     // background-color: pink;
     >h1 {

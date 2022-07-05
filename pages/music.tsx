@@ -37,3 +37,12 @@ function Music() {
 }
 
 export default Music
+
+// export async function getStaticProps() {
+
+//     const data = fetch("https://api.soundcloud.com/tracks/kaleidoscope-vibes-2022")
+//         .then(res => console.log(res))
+//     return {
+//         props: { data }
+//     }
+// }

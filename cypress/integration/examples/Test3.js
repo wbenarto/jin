@@ -13,10 +13,20 @@ describe('My Third test Suite', function() {
 
         // Dynamic Dropdown
         cy.get('#autocomplete').type('ind')
-        cy.get('.ul-menu-item div').each(($el, index, $list) => {
+        cy.get('.ui-menu-item div').each(($el, index, $list) => {
             if ($el.text() == 'India') {
                 $el.click()
             }
         })
+
+        cy.get('#autocomplete').should('have.value', 'India')
+
+        cy.get('#displayed-text').should('be.visible')
+        cy.get('#hide-textbox').click()
+        cy.get('#displayed-text').should('not.be.visible')
+        cy.get('#show-textbox').click()
+        cy.get('#displayed-text').should('be.visible')
+
+
     })
 })

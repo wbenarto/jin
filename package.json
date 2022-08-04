@@ -13,6 +13,10 @@
     "recordDashboardTest": "npm run test -- --record --key 171c2b36-ce32-42d3-b24b-435da45b543f",
     "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
   },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/integration/"
+  },
   "dependencies": {
     "framer-motion": "^5.3.1",
     "next": "12.0.4",
@@ -27,6 +31,7 @@
     "@types/node": "16.11.7",
     "@types/react": "17.0.35",
     "cypress": "^10.3.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",

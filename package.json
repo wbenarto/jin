@@ -6,7 +6,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "scss": "node-sass --watch styles/scss -o styles/css"
+    "scss": "node-sass --watch styles/scss -o styles/css",
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --broswer chrome",
+    "recordDashboardTest": "npm run test -- --record --key 171c2b36-ce32-42d3-b24b-435da45b543f",
+    "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
   },
   "dependencies": {
     "framer-motion": "^5.3.1",
@@ -25,6 +30,8 @@
     "cypress-iframe": "^1.0.1",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
     "typescript": "4.4.4"
   }
 }

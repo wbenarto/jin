@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-04T16:38:12.741Z",
+    "end": "2022-08-04T16:38:27.776Z",
+    "duration": 15035,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "34340eff-659d-4e07-9be2-620b5432ddf9",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\TestDemo.js",
+      "file": "cypress\\integration\\examples\\TestDemo.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1e690b2-b09b-4ee4-ae47-a2f73b95fe18",
+          "title": "Frames Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Cases",
+              "fullTitle": "Frames Test Test Cases",
+              "timedOut": null,
+              "duration": 10532,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice');\ncy.frameLoaded('#courses-iframe');\ncy.iframe().find(\"a[href*='mentorship']\").eq(0).click();\ncy.iframe().find(\"h1[class*='pricing-title']\").should('have.length', 2);",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:155774:74)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:156993:16\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:13012:23)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8134:41\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7712:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\TestDemo.js:105:8)",
+                "diff": null
+              },
+              "uuid": "4aa29678-71d0-4d3f-87d9-7ddb789811d2",
+              "parentUUID": "c1e690b2-b09b-4ee4-ae47-a2f73b95fe18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4aa29678-71d0-4d3f-87d9-7ddb789811d2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10532,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

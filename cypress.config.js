@@ -3,6 +3,7 @@ module.exports = {
   projectId: "9chbz1",
   defaultCommandTimeout: 8000,
   pageLoadTimeout: 10000,
+  reporter: "mochawesome",
   env: {
     url: 'https://rahulshettyacademy.com/angularpractice/'
   },

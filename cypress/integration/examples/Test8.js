@@ -19,7 +19,7 @@ describe('Framework Test Angular', function() {
         const homePage = new HomePage()
         const productPage = new ProductPage()
         
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.visit(Cypress.env('url'))
 
         homePage.getEditBox().type(this.data.name)
         homePage.getGender().select(this.data.gender)
@@ -43,6 +43,19 @@ describe('Framework Test Angular', function() {
         })
 
         productPage.checkOutButton().click()
+        var sum = 0
+        cy.get('tr td:nth-child(4) strong').each(($el, index, $list ) => {
+            const prodPrice = Number($el.text().split(' ')[1])
+            sum += prodPrice
+            cy.log(sum)
+        })
+
+        cy.get('h3 strong').then(function(el) {
+            const amount = Number(el.text().split(' ')[1])
+
+            // cypress assertion to compare value
+            expect(amount).to.equal(sum)
+        })
         cy.contains('Checkout').click()
         cy.get('#country').type('India')
         cy.get('.suggestions > ul > li > a').click()

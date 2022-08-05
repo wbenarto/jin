@@ -26,7 +26,7 @@ describe('Framework Test Angular', function() {
         homePage.getTwoWayDataBinding().should('have.value', this.data.name)
         homePage.getEditBox().should('have.attr', 'minlength', '2')
         homePage.getEntrepreneur().should('be.disabled')
-
+        Cypress.config('defaultCommandTimeout', 8000)
         homePage.getShopTab().click()
 
         // cy.get('input[name="name"]:nth-child(2)').type(this.data.name)

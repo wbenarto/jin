@@ -5,6 +5,8 @@ import ProductPage from '../../../pageObjects/ProductPage'
 const productPage = new ProductPage()
 const homePage = new HomePage()
 
+let name;
+
 beforeEach(function(){
     cy.fixture('example').then(function(data) {
         this.data = data
@@ -51,4 +53,23 @@ Then('select the country submit and verify Thank you', function() {
         const text = el.text()
         expect(text.includes('Success')).to.be.true
     })
+})
+
+When("I fill the form details", (dbtable) => {
+    name = dbtable.rawTable[1][0]
+    homePage.getEditBox().type(name)
+    homePage.getGender().select(dbtable.rawTable[1][1])
+
+})
+
+Then("Validate the forms behavior", () => {
+    homePage.getTwoWayDataBinding().should('have.value', name)
+    homePage.getEditBox().should('have.attr', 'minlength', '2')
+    homePage.getEntrepreneur().should('be.disabled')
+    Cypress.config('defaultCommandTimeout', 8000)
+
+})
+
+And("Select the Shop Page", ()=> {
+    homePage.getShopTab().click()
 })

@@ -15,7 +15,8 @@ describe('Logging In - Single Sign On', function() {
                 password: 'password123'
             },
             form: true
-
+            
         }
+        cy.request(options)
     })
 })

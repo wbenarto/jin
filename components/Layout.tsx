@@ -54,9 +54,8 @@ const variants2 = {
    }
 };
 
-
-const Navbar = () => {
-
+const Layout = ({children} : {children: React.ReactNode}) => {
+    
    const [isOpen, toggleOpen] = useCycle(false, true);
    const containerRef = useRef(null);
    const { height } = useDimensions(containerRef);
@@ -65,16 +64,20 @@ const Navbar = () => {
    const links = ['HOME', "MUSIC", "PHOTOGRAPHY", 'ABOUT']
    const link = ['', "music", "photography", 'about']
 
-
-   return (
-      <div className={styles.container}>
-          <motion.nav
+    return (
+        <div className={styles.layout}>
+            
+            <nav className={styles.container}>
+            <div className={styles.logo} >
+            <p>JIN CHOI</p>
+            </div>
+            <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}
             custom={height}
             ref={containerRef}
             className={styles.menuNav}
-        >
+                >
             <motion.div className={styles.background} variants={sidebar} />
             <motion.ul className={styles.navUl} variants={variants}>
             {itemIds.map((i: any) => (
@@ -87,21 +90,38 @@ const Navbar = () => {
  
                >
  
-                 <button  className={styles.textPlaceholder} style={style}>{links[i]}</button>
-             </motion.li>
-         </Link>
-        ))}
-         </motion.ul>
-            <MenuToggle toggle={() => toggleOpen()} />
-        </motion.nav>
-            <div className={styles.logo}>
+                    <button  className={styles.textPlaceholder} style={style}>{links[i]}</button>
+                </motion.li>
+                </Link>
+            ))}
+                </motion.ul>
+                <MenuToggle toggle={() => toggleOpen()} />
+            </motion.nav>
+            <div className={styles.sidebar}>
                <p>JIN CHOI</p>
+       
+               <div className={styles.navLinks}>
+               
+               {itemIds.map((i:any) => (
+                <button>
+                    <Link href={`/${link[i]}`}>
+                        <p>
+                            {links[i]}
+                        </p>
+                    </Link>
+                </button>
+               ))}
+                </div>
             </div>
+            
+            </nav>
 
- 
-
-      </div >
-   )
+            <div className={styles.children}>
+                {children}
+            </div>
+        
+        </div>
+    )
 }
 
-export default Navbar
+export default Layout

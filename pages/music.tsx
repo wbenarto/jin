@@ -1,15 +1,12 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import styles from '../styles/Content.module.scss'
 import styles2 from '../styles/Music.module.scss'
-import { MenuNav } from '../components/MenuNav'
-
 
 function Music() {
     return (
         <div className={styles.body}>
-            <MenuNav />
+            
             <div className={styles.contactContainer}>
                 <div className={styles2.banner}>
                     <img className={styles2.bannerImage} src='/images/travel/baynight.jpg' alt='Bay Bridge'></img>
@@ -26,9 +23,6 @@ function Music() {
                     <div className={styles2.socialLinks}><h3>Twitch</h3><a href='https://www.twitch.tv/djinn415'>https://www.twitch.tv/djinn415</a></div>
                     <div className={styles2.socialLinks}><h3>Sound Cloud</h3><a href='https://soundcloud.com/djinn415'>https://soundcloud.com/djinn415</a></div>
                     <div className={styles2.socialLinks}><h3>Cambrian</h3><a href='https://www.cambrianradio.co.uk/'>https://www.cambrianradio.co.uk/</a></div>
-
-
-
                 </div>
             </div>
             <Footer />
@@ -37,12 +31,3 @@ function Music() {
 }
 
 export default Music
-
-// export async function getStaticProps() {
-
-//     const data = fetch("https://api.soundcloud.com/tracks/kaleidoscope-vibes-2022")
-//         .then(res => console.log(res))
-//     return {
-//         props: { data }
-//     }
-// }

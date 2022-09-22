@@ -1,17 +1,45 @@
 @import 'variables';
 
+.layout {
+  //background-color: pink;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+
+  @media screen and (min-width: 476px) {
+    display: grid; 
+    grid-template-columns: 30% 1fr ;
+    
+  }
+}
+
 .container {
+ 
   width: 100%;
-  overflow: hidden;
-  height: 100px;
-  background-color: transparent;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: space-between;
+  height: 100vh;
+  //background-color: purple;
+  display: grid;
   font-family: $primaryFont;
-  z-index: 4;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    height: 80px;
+    //background-color: yellow;
+    display: flex;
+    padding: 0 10px;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+ 
+    z-index: 4;
+  
+  }
+
+
 
   // @media screen and (max-width: 1076px) {
   //   margin-left: -200px;
@@ -19,63 +47,73 @@
   // }
 }
 
-.navLinks {
-  padding: 10px;
-  font-size: 18px;
-  margin: 15px 40px 15px 0px;
-  align-items: center;
-  display: flex;
-  width: 40%;
-  color: $primary;
-  justify-content: space-between;
-  letter-spacing: 5px;
 
+.children {
+  width: 100vw;
+  height: 100%;
+  // background-color: blue;
+
+}
+
+.sidebar {
+ //background-color: turquoise;
+  display: none;
+
+  @media screen and (min-width: $breakpoint-mobile) {
+    display: inline-block;
+    min-width:250px;
+ 
+
+    height: 80%;
+
+    >p {
+      font-size: $text-xl;
+      top: 0;
+      height: 40px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      // background-color: aquamarine;
+    }
+  }
+}
+
+
+.navLinks {
+
+
+  font-size: 10px;
+
+  // background-color: yellow;
+  height: 80%;
+  display:flex;
+
+  flex-direction: column;
+  >button{
+    background-color: transparent;
+    border:none;
+    text-align: left;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 
 .logo {
-  color: white;
-  font-size: 46px;
-  // background-color: blue;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: none;
   letter-spacing: 5px;
-  position: fixed;
-  font-weight: bold;
-  cursor: pointer;
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     font-size: 32px;
-  }
-
-  >h1 {
-    font-size: 20px;
-    z-index: 9;
-
-
-    @media screen and (max-width: 768px) {
-      font-size: 12px;
-    }
-  }
-
-  >P {
-
-    padding-bottom: 0px;
-    z-index: 10;
-    padding: 10px;
-    border-radius: 3%;
-
-
-
-    >span {
-      z-index: 7;
-      color: $primary;
-
-    }
-  }
+    display: grid;
+    font-weight: bold;
+    color: black;
+    font-size: $text-sm;
+    width: 100%;
+    
+    // background-color: blue;
+   
+   }
+ 
 
 }
 
@@ -125,7 +163,7 @@
   left: 0;
   bottom: 0;
   width: 300px;
-  background: black;
+
 }
 
 
@@ -138,7 +176,7 @@
 }
 
 .textPlaceholder {
-  border-radius: 5px;
+  border-radius: 50px;
   width: 20px;
   height: 100%;
   padding: 10px;
@@ -152,12 +190,20 @@
 }
 
 .menuNav {
-  position: fixed;
+  
   top: 0;
-  left: 0;
-  bottom: 0;
-  width: 0px;
+  margin-right: 0 ;
+width: 100%;
   z-index: 6;
+  background-color: purple;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  @media screen and (min-width: 476px) {
+    display:none;
+   }
+ 
 }
 
 .navButton {
@@ -170,17 +216,18 @@
   position: absolute;
   z-index: 40;
   top: 18px;
-  left: 15px;
+  right: 15px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: white;
-  background: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
 
   &:hover {
     cursor: pointer;
   }
-
 
 
 }

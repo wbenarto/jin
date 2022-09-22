@@ -1,50 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
+.layout {
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+}
+
+@media screen and (min-width: 476px) {
+  .layout {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 1fr;
+        grid-template-columns: 30% 1fr;
+  }
+}
+
 .container {
   width: 100%;
-  overflow: hidden;
-  height: 100px;
-  background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
   font-family: Poiret One;
-  z-index: 4;
-}
-
-.navLinks {
-  padding: 10px;
-  font-size: 18px;
-  margin: 15px 40px 15px 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 40%;
-  color: #e56020;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  letter-spacing: 5px;
-}
-
-.logo {
-  color: white;
-  font-size: 46px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10px;
+    top: 0;
+    left: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 4;
+  }
+}
+
+.children {
+  width: 100vw;
+  height: 100%;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media screen and (min-width: 479px) {
+  .sidebar {
+    display: inline-block;
+    min-width: 250px;
+    height: 80%;
+  }
+  .sidebar > p {
+    font-size: 2rem;
+    top: 0;
+    height: 40px;
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+}
+
+.navLinks {
+  font-size: 10px;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,40 +84,33 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  letter-spacing: 5px;
-  position: fixed;
-  font-weight: bold;
+}
+
+.navLinks > button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+
+.navLinks > button:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+.logo {
+  display: none;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 479px) {
   .logo {
     font-size: 32px;
-  }
-}
-
-.logo > h1 {
-  font-size: 20px;
-  z-index: 9;
-}
-
-@media screen and (max-width: 768px) {
-  .logo > h1 {
+    display: -ms-grid;
+    display: grid;
+    font-weight: bold;
+    color: black;
     font-size: 12px;
+    width: 100%;
   }
-}
-
-.logo > P {
-  padding-bottom: 0px;
-  z-index: 10;
-  padding: 10px;
-  border-radius: 3%;
-}
-
-.logo > P > span {
-  z-index: 7;
-  color: #e56020;
 }
 
 .logoNav {
@@ -129,7 +154,6 @@
   left: 0;
   bottom: 0;
   width: 300px;
-  background: black;
 }
 
 .iconPlaceholder {
@@ -143,7 +167,7 @@
 }
 
 .textPlaceholder {
-  border-radius: 5px;
+  border-radius: 50px;
   width: 20px;
   height: 100%;
   padding: 10px;
@@ -159,12 +183,26 @@
 }
 
 .menuNav {
-  position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  width: 0px;
+  margin-right: 0;
+  width: 100%;
   z-index: 6;
+  background-color: purple;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 476px) {
+  .menuNav {
+    display: none;
+  }
 }
 
 .navButton {
@@ -177,12 +215,19 @@
   position: absolute;
   z-index: 40;
   top: 18px;
-  left: 15px;
+  right: 15px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: white;
-  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navButton:hover {

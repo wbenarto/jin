@@ -42,7 +42,9 @@
 .musicContent {
   color: white;
   margin: 40px;
+  max-width: 800px;
   font-family: Roboto;
+  line-height: 1.5rem;
 }
 
 .musicContent > h1 {

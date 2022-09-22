@@ -1,4 +1,3 @@
-import { MenuNav } from '../components/MenuNav'
 import styles from '../styles/Content.module.css'
 import Footer from '../components/Footer'
 
@@ -8,7 +7,7 @@ const About = () => {
     return (
         <main >
 
-            <MenuNav />
+
             <div className={styles.contactContainer} >
                 <h3>CONTACT</h3>
 

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { MenuNav } from '../components/MenuNav'
 import styles from '../styles/Photography.module.css'
 import styles2 from '../styles/Content.module.css'
 
@@ -52,7 +51,7 @@ const Photography = () => {
   }, [animation, inView])
   return (
     <main>
-      <MenuNav />
+
       <div className={styles.photographyFilter}>
         <button onClick={() => setActive('food')}>FOOD</button>
         <button onClick={() => setActive('travel')}>LANDSCAPE</button>

@@ -14,7 +14,7 @@ const Footer = () => {
                 JIN<span>CHOI</span>
             </div>
 
-            <div className={style.footerSection}>Copyright © 2021 Jin Choi All rights reserved.</div>
+            <div className={style.footerSection}><p>Copyright © 2021 Jin Choi All rights reserved.</p></div>
 
             <div className={style.footerSection}>
 

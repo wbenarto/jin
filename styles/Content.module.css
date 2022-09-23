@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100;400;500;600;700;800&family=Sansita&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
 .body {
   padding: 0;
@@ -16,15 +16,51 @@
 
 .container {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    z-index: 3;
+  }
+}
+
+.imageCarousel {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: 300px 200px;
-  grid-gap: 2px;
-  grid-auto-flow: dense;
-  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .imageCarousel {
+    padding: 50px;
+  }
+}
+
+.image {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .image > img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .galleryItem {
@@ -184,7 +220,7 @@
 .portraits {
   max-width: 80%;
   height: 100%;
-  margin: 60px 0;
+  margin-bottom: 60px;
   overflow: hidden;
 }
 
@@ -218,7 +254,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Poiret One;
+  font-family: Arsenal;
 }
 
 .contactContainer > h3 {
@@ -241,7 +277,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
+  color: black;
   margin-bottom: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -258,139 +294,12 @@
 
 .textBox > p {
   margin: 20px 40px;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
+  font-size: 24px;
+  line-height: 2rem;
 }
 
 .textBox > h2 {
   text-align: center;
-}
-
-.heroContainer {
-  height: 100vh;
-  overflow: hidden;
-  scroll-snap-align: start;
-}
-
-.parallaxLayer {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 120vh;
-  overflow: hidden;
-}
-
-.y1Image {
-  overflow: hidden;
-  z-index: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.y2Image {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.heroQuote {
-  color: white;
-  width: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-left: 50%;
-  z-index: 1;
-  text-align: center;
-  position: absolute;
-  font-family: Poiret One;
-}
-
-@media screen and (max-width: 600px) {
-  .heroQuote {
-    font-size: .5em;
-    width: 300px;
-    top: 30%;
-  }
-}
-
-.heroFooter {
-  z-index: 1;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  overflow: hidden;
-  bottom: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #dde9eb;
-  text-align: right;
-  margin-right: 20px;
-}
-
-.heroFooter > p {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  font-family: Montserrat;
-}
-
-@media screen and (max-width: 768px) {
-  .heroFooter > p {
-    font-size: .8rem;
-  }
-}
-
-.bottomFade {
-  width: 100%;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  z-index: 2;
-  position: absolute;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), color-stop(19%, rgba(0, 0, 0, 0.938)), color-stop(34%, rgba(0, 0, 0, 0.541)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(0, 0, 0, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.002)), to(transparent));
-  background: linear-gradient(to top, black 10%, rgba(0, 0, 0, 0.938) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
-}
-
-.topFade {
-  width: 100%;
-  top: 0;
-  height: 20%;
-  left: 0;
-  z-index: 2;
-  position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, black), color-stop(19%, rgba(0, 0, 0, 0.938)), color-stop(34%, rgba(0, 0, 0, 0.541)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(0, 0, 0, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.002)), to(transparent));
-  background: linear-gradient(to bottom, black 1%, rgba(0, 0, 0, 0.938) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
-}
-
-.fullFade {
-  width: 100%;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  z-index: 2;
-  position: absolute;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(0, 0, 0, 0.45)), color-stop(19%, rgba(0, 0, 0, 0.45)), color-stop(34%, rgba(0, 0, 0, 0.45)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(0, 0, 0, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.002)), to(transparent));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 3%, rgba(0, 0, 0, 0.45) 19%, rgba(0, 0, 0, 0.45) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
 }
 
 .socialsContainer {
@@ -431,184 +340,5 @@
   font-weight: 400;
   color: #e56020;
   cursor: pointer;
-}
-
-.midNav {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 1200px;
-  background-color: black;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 2;
-  color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .midNav {
-    height: 700px;
-  }
-}
-
-.midBackground {
-  max-width: 1200px;
-  width: 100%;
-  min-height: 400px;
-  height: 700px;
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.midLinks {
-  max-width: 1500px;
-  width: 100%;
-  height: 500px;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 20px;
-}
-
-.midLink {
-  max-width: 250px;
-  width: 100%;
-  margin: 0 20px;
-  height: 300px;
-  position: relative;
-}
-
-@media screen and (max-width: 478px) {
-  .midLink {
-    width: 100px;
-    height: 150px;
-    margin: 0 10px;
-  }
-}
-
-.midLink:hover {
-  cursor: pointer;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.midLink:hover .overlay {
-  opacity: 1;
-}
-
-.text {
-  color: #dde9eb;
-  font-size: 1rem;
-  position: relative;
-  padding-top: 60px;
-  letter-spacing: 1px;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-  text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  .text {
-    font-size: .6rem;
-    padding-top: 40px;
-  }
-}
-
-.midLink:hover .text {
-  bottom: 50%;
-  -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-}
-
-.midLinkPic {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 40%;
-     object-position: 40%;
-}
-
-.midImageDiv {
-  background-color: pink;
-  width: 100%;
-  height: 1400px;
-}
-
-@media screen and (max-width: 768px) {
-  .midImageDiv {
-    height: 700px;
-  }
-}
-
-.midImage {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.midContact {
-  width: 900px;
-  height: 400px;
-  position: absolute;
-  top: 40%;
-  font-size: 5rem;
-  text-align: center;
-  z-index: 3;
-  font-weight: 500;
-}
-
-@media screen and (max-width: 768px) {
-  .midContact {
-    width: 300px;
-    font-size: 1.5rem;
-  }
 }
 /*# sourceMappingURL=Content.module.css.map */

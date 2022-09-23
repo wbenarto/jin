@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100;400;500;600;700;800&family=Sansita&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
 .layout {
   width: 100vw;
@@ -6,12 +6,12 @@
   height: 100vh;
 }
 
-@media screen and (min-width: 476px) {
+@media screen and (min-width: 768px) {
   .layout {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 30% 1fr;
-        grid-template-columns: 30% 1fr;
+    -ms-grid-columns: 20% 1fr;
+        grid-template-columns: 20% 1fr;
   }
 }
 
@@ -22,22 +22,18 @@
   display: grid;
   font-family: Poiret One;
   overflow: hidden;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 768px) {
   .container {
     width: 100%;
     height: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 10px;
     top: 0;
     left: 0;
     -webkit-box-pack: justify;
@@ -50,27 +46,58 @@
   }
 }
 
+.logo {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    display: -ms-grid;
+    display: grid;
+    font-weight: 800;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    letter-spacing: 5px;
+    padding-left: 25px;
+  }
+}
+
 .children {
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  z-index: 9;
+}
+
+@media screen and (max-width: 768px) {
+  .children {
+    height: calc(100% - 80px);
+  }
 }
 
 .sidebar {
   display: none;
 }
 
-@media screen and (min-width: 479px) {
+@media screen and (min-width: 768px) {
   .sidebar {
-    display: inline-block;
-    min-width: 250px;
+    display: block;
+    margin: 0 20px;
     height: 80%;
   }
-  .sidebar > p {
+  .sidebar > button {
+    border: none;
+    background-color: transparent;
+    font-family: Montserrat;
     font-size: 2rem;
     top: 0;
     height: 40px;
     letter-spacing: 5px;
     font-weight: bold;
+    margin-bottom: 40px;
+  }
+  .sidebar > button:hover {
+    cursor: pointer;
   }
 }
 
@@ -88,29 +115,15 @@
 
 .navLinks > button {
   background-color: transparent;
+  font-family: Arsenal;
   border: none;
   text-align: left;
+  letter-spacing: 5px;
+  font-weight: 600;
 }
 
 .navLinks > button:hover {
   cursor: pointer;
-}
-
-.logo {
-  display: none;
-  letter-spacing: 5px;
-}
-
-@media screen and (max-width: 479px) {
-  .logo {
-    font-size: 32px;
-    display: -ms-grid;
-    display: grid;
-    font-weight: bold;
-    color: black;
-    font-size: 12px;
-    width: 100%;
-  }
 }
 
 .logoNav {
@@ -151,9 +164,10 @@
 .background {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 300px;
+  overflow: hidden;
+  background-color: white;
 }
 
 .iconPlaceholder {
@@ -166,28 +180,9 @@
   margin-right: 20px;
 }
 
-.textPlaceholder {
-  border-radius: 50px;
-  width: 20px;
-  height: 100%;
-  padding: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  color: white;
-  background-color: transparent;
-}
-
-.textPlaceholder:hover {
-  cursor: pointer;
-}
-
 .menuNav {
-  top: 0;
-  margin-right: 0;
   width: 100%;
   z-index: 6;
-  background-color: purple;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -197,9 +192,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: white;
 }
 
-@media screen and (min-width: 476px) {
+@media screen and (min-width: 768px) {
   .menuNav {
     display: none;
   }
@@ -228,6 +224,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: transparent;
 }
 
 .navButton:hover {
@@ -235,10 +232,9 @@
 }
 
 .navUl {
-  padding: 25px;
   position: absolute;
-  top: 100px;
-  width: 230px;
+  top: 80px;
+  right: 0;
 }
 
 .navLi {
@@ -247,9 +243,39 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  cursor: pointer;
+  background-color: rgba(5, 5, 5, 0.8);
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  padding: 5px 10px;
+  border-radius: 5px;
+  height: 40px;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .navLi .navLi {
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+  }
+}
+
+.textPlaceholder {
+  border-radius: 50px;
+  border: none;
+  font-size: 12px;
+  height: 100%;
+  letter-spacing: 2px;
+  text-align: right;
+  padding-right: 25px;
+  font-family: Montserrat;
+  font-weight: 400;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+  background-color: transparent;
+}
+
+.textPlaceholder:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=Navbar.module.css.map */

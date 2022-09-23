@@ -7,16 +7,9 @@ import { useInView } from "react-intersection-observer"
 import { useAnimation, motion } from "framer-motion"
 
 const Travel = () => {
-    const animation = useAnimation()
-    //     const [contentRef, inView] = useInView({
-    //         triggerOnce: true,
-    //         rootMargin: "-300px",
-    //         delay: 2.5,
-    //     })
+
     const container = {
-        initial: { y: 800 },
         animate: {
-            y: 0,
             transition: {
                 staggerChildren: 0.2,
             },
@@ -32,15 +25,6 @@ const Travel = () => {
             },
         },
     }
-
-    // useEffect(() => {
-
-
-    //     if (inView) {
-    //       animation.start("visible")
-    //     }
-
-    //   }, [animation, inView])
 
 
     return (

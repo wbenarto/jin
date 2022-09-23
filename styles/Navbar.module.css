@@ -72,11 +72,14 @@
   width: 100%;
   overflow: scroll;
   z-index: 9;
+  margin-top: 80px;
+  max-width: 900px;
 }
 
 @media screen and (max-width: 768px) {
   .children {
     height: calc(100% - 80px);
+    margin-top: 0;
   }
 }
 

@@ -1,6 +1,4 @@
 import { useEffect } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import styles2 from '../styles/Content.module.css'
 
 //Scroll Observer
@@ -15,9 +13,8 @@ const Portrait = () => {
         delay: 2.5,
     })
     const container = {
-        initial: { y: 800 },
+        
         animate: {
-            y: 0,
             transition: {
                 staggerChildren: 0.2,
             },

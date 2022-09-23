@@ -1,12 +1,11 @@
 @import 'variables';
 
 .layout {
-  //background-color: pink;
   width: 100vw;
   position: relative;
   height: 100vh;
 
-  @media screen and (min-width: 476px) {
+  @media screen and (min-width: $breakpoint-tablet) {
     display: grid; 
     grid-template-columns: 30% 1fr ;
     
@@ -17,61 +16,75 @@
  
   width: 100%;
   height: 100vh;
-  //background-color: purple;
-  display: grid;
+  display: flex;
+  margin: 0 auto;
+
+  justify-content: center;
   font-family: $primaryFont;
   overflow: hidden;
-  justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: $breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-tablet) {
     width: 100%;
     height: 80px;
-    //background-color: yellow;
     display: flex;
-    padding: 0 10px;
     top: 0;
     left: 0;
     justify-content: space-between;
     align-items: center;
- 
     z-index: 4;
-  
   }
+}
 
+.logo {
+  display: none;
 
-
-  // @media screen and (max-width: 1076px) {
-  //   margin-left: -200px;
-  //   margin-top: -250px;
-  // }
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: grid;
+    font-weight: 800;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    letter-spacing: 5px;
+    padding-left: 25px;
+   }
 }
 
 
 .children {
-  width: 100vw;
-  height: 100%;
-  // background-color: blue;
+  width: 100%;
+  overflow: scroll;
+  z-index: 9;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    height: calc(100% - 80px);
+  }
 
 }
 
 .sidebar {
- //background-color: turquoise;
   display: none;
 
-  @media screen and (min-width: $breakpoint-mobile) {
-    display: inline-block;
-    min-width:250px;
- 
-
+  @media screen and (min-width: $breakpoint-tablet) {
+  display: block;
     height: 80%;
+    width: 80%;
+    max-width: 250px;
+    padding: 0 20px;
 
-    >p {
+    >button {
+      border: none;
+      background-color: transparent;
+      font-family: $navbarFont;
       font-size: $text-xl;
       top: 0;
       height: 40px;
       letter-spacing: 5px;
-      font-weight: bold;
+      font-weight: bold; 
+      margin-bottom: 80px;
+      &:hover {
+        cursor: pointer;
+      }
       // background-color: aquamarine;
     }
   }
@@ -82,16 +95,19 @@
 
 
   font-size: 10px;
+  width: 100%;
 
-  // background-color: yellow;
   height: 80%;
   display:flex;
-
   flex-direction: column;
   >button{
     background-color: transparent;
+    font-family: $fouthFont;
     border:none;
     text-align: left;
+    letter-spacing: 5px;
+    font-weight: 600;
+ 
     &:hover {
       cursor: pointer;
     }
@@ -99,23 +115,7 @@
 }
 
 
-.logo {
-  display: none;
-  letter-spacing: 5px;
-  @media screen and (max-width: $breakpoint-mobile) {
-    font-size: 32px;
-    display: grid;
-    font-weight: bold;
-    color: black;
-    font-size: $text-sm;
-    width: 100%;
-    
-    // background-color: blue;
-   
-   }
- 
 
-}
 
 .logoNav {
   margin-top: 0;
@@ -160,9 +160,10 @@
 .background {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 300px;
+  overflow: hidden;
+  background-color: white;
 
 }
 
@@ -175,32 +176,19 @@
   margin-right: 20px;
 }
 
-.textPlaceholder {
-  border-radius: 50px;
-  width: 20px;
-  height: 100%;
-  padding: 10px;
-  flex: 1;
-  color: white;
-  background-color: transparent;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 .menuNav {
-  
-  top: 0;
-  margin-right: 0 ;
-width: 100%;
+
+  width: 100%;
   z-index: 6;
-  background-color: purple;
+ 
   justify-content: center;
   align-items: center;
   display: flex;
+  background-color: white;
+  
 
-  @media screen and (min-width: 476px) {
+  @media screen and (min-width: $breakpoint-tablet) {
     display:none;
    }
  
@@ -223,6 +211,7 @@ width: 100%;
  display: flex;
  justify-content: center;
  align-items: center;
+ background-color: transparent;
 
 
   &:hover {
@@ -233,19 +222,49 @@ width: 100%;
 }
 
 .navUl {
-  padding: 25px;
+ 
   position: absolute;
-  top: 100px;
-  width: 230px;
-
+  top: 80px;
+  right: 0;
 }
 
 .navLi {
   list-style: none;
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
   cursor: pointer;
+  background-color: rgba(5, 5, 5, 0.8); 
+
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  padding: 5px 10px;
+  border-radius: 5px; 
+  height: 40px;
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .navLi {
+      -webkit-backdrop-filter: blur(40px);
+      backdrop-filter: blur(40px);
+    }
+  }
+
+}
 
 
+.textPlaceholder {
+  border-radius: 50px;
+  border:none;
+  font-size: $text-sm;
+  height: 100%;
+  letter-spacing: 2px;
+  text-align: right;
+  padding-right: 25px;
+  font-family: $navbarFont;
+  font-weight: 400;
+  flex: 1;
+  color: white;
+  background-color: transparent;
+
+
+  &:hover {
+    cursor: pointer;
+  }
 }

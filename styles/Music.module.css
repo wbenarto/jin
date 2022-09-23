@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100;400;500;600;700;800&family=Sansita&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
 .banner {
   height: 40vh;
@@ -40,11 +40,10 @@
 }
 
 .musicContent {
-  color: white;
-  margin: 40px;
-  max-width: 800px;
-  font-family: Roboto;
+  width: 100%;
+  font-family: Arsenal;
   line-height: 1.5rem;
+  padding: 20px;
 }
 
 .musicContent > h1 {
@@ -54,6 +53,7 @@
 .musicContent > h2 {
   color: gray;
   margin: 0;
+  font-size: 12px;
 }
 
 .socialLinks a:hover {

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import Link from 'next/link'
@@ -35,19 +35,24 @@ const variants = {
        transition: { staggerChildren: 0.05, staggerDirection: -1 }
    }
 };
-const itemIds = [0, 1, 2, 3];
+const itemIds = [0, 1, 2];
 
 const variants2 = {
    open: {
        y: 0,
        opacity: 1,
+        display:'block',
+       x: 0,
+       zIndex: 1,
        transition: {
            y: { stiffness: 1000, velocity: -100 }
        }
    },
    closed: {
-       y: 50,
-       opacity: 0,
+       y: -50,
+       opacity:0,
+       zIndex: 0,
+       display:"none",
        transition: {
            y: { stiffness: 1000 }
        }
@@ -56,21 +61,25 @@ const variants2 = {
 
 const Layout = ({children} : {children: React.ReactNode}) => {
     
-   const [isOpen, toggleOpen] = useCycle(false, true);
+   const [isOpen, toggleOpen] = useState(false);
    const containerRef = useRef(null);
    const { height } = useDimensions(containerRef);
 
-   const style = { backgroundColor: '#000222' };
-   const links = ['HOME', "MUSIC", "PHOTOGRAPHY", 'ABOUT']
-   const link = ['', "music", "photography", 'about']
+   const links = [ "MUSIC", "PHOTOGRAPHY", 'ABOUT']
+   const link = [ "music", "photography", 'about']
 
     return (
-        <div className={styles.layout}>
+        <div className={styles.layout} >
             
-            <nav className={styles.container}>
+            <nav className={styles.container} >
+            
+            {/* mobile view */}
+            <Link href='/'>
             <div className={styles.logo} >
             <p>JIN CHOI</p>
             </div>
+            </Link>
+          
             <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}
@@ -90,16 +99,21 @@ const Layout = ({children} : {children: React.ReactNode}) => {
  
                >
  
-                    <button  className={styles.textPlaceholder} style={style}>{links[i]}</button>
+                    <button  onClick={()=>toggleOpen(false)} className={styles.textPlaceholder} >{links[i]}</button>
                 </motion.li>
                 </Link>
             ))}
                 </motion.ul>
-                <MenuToggle toggle={() => toggleOpen()} />
+                <MenuToggle toggle={() => toggleOpen(!isOpen)} />
             </motion.nav>
+
+            {/* desktop view */}
             <div className={styles.sidebar}>
-               <p>JIN CHOI</p>
+                <Link href='/'>
+                    <button>JIN CHOI</button>
        
+                </Link>
+    
                <div className={styles.navLinks}>
                
                {itemIds.map((i:any) => (
@@ -116,7 +130,7 @@ const Layout = ({children} : {children: React.ReactNode}) => {
             
             </nav>
 
-            <div className={styles.children}>
+            <div onClick={()=>toggleOpen(false)} className={styles.children}>
                 {children}
             </div>
         

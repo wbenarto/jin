@@ -9,7 +9,7 @@ const About = () => {
 
 
             <div className={styles.contactContainer} >
-                <h3>CONTACT</h3>
+                
 
                 <div className={styles.imageContact}>
                     <img src='/images/jin.webp'></img>
@@ -25,7 +25,7 @@ const About = () => {
 
                 </div>
             </div>
-            <Footer />
+ 
 
         </main>
     )

@@ -2,21 +2,18 @@
 
 .photographyFilter {
     width: 100%;
-    height: 100px;
-    background-color: transparent;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-
-
     >button {
         font-family: $primaryFont;
-        height: 100px;
         width: 100%;
-        margin: 0 40px;
+        font-weight: bold;
+        letter-spacing: 2px;
         background-color: transparent;
-        color: white;
+        color: black;
         font-size: 1.5rem;
         z-index: 5;
         border-radius: 2px;
@@ -24,21 +21,21 @@
 
         &:hover {
             cursor: pointer;
-            color: $primary;
+            color: gray;
 
             transition: ease-in-out;
         }
 
         &:active {
             border-bottom: 1px white solid;
-            color: $primary;
+            color: black;
         }
 
         @media screen and (max-width: 798px) {
             font-size: .8rem;
             // background-color: pink;
             margin: 0;
-            margin-top: 60px;
+         
         }
     }
 }

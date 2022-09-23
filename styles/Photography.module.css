@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100&family=Sansita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Maven+Pro&family=Montserrat&family=Roboto:wght@100;400;500;600;700;800&family=Sansita&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&display=swap");
 .photographyFilter {
   width: 100%;
-  height: 100px;
-  background-color: transparent;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,11 +16,11 @@
 
 .photographyFilter > button {
   font-family: Poiret One;
-  height: 100px;
   width: 100%;
-  margin: 0 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
   background-color: transparent;
-  color: white;
+  color: black;
   font-size: 1.5rem;
   z-index: 5;
   border-radius: 2px;
@@ -30,21 +29,20 @@
 
 .photographyFilter > button:hover {
   cursor: pointer;
-  color: #e56020;
+  color: gray;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
 }
 
 .photographyFilter > button:active {
   border-bottom: 1px white solid;
-  color: #e56020;
+  color: black;
 }
 
 @media screen and (max-width: 798px) {
   .photographyFilter > button {
     font-size: .8rem;
     margin: 0;
-    margin-top: 60px;
   }
 }
 /*# sourceMappingURL=Photography.module.css.map */

@@ -29,10 +29,15 @@
 
 .imageCarousel {
 
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;  
 
   @media screen and (min-width: $breakpoint-tablet) {
     padding: 50px;
+    max-width: 900px;
   }
  
 
@@ -41,11 +46,12 @@
   width: 100%;
   padding: 10px;
   overflow: hidden;
-  margin: 0 auto;
+  
+  display: flex;
+  justify-content: center;
   // background-color:pink;
   @media screen and (min-width: $breakpoint-tablet) {
-
-
+    padding: 40px 10px;
 
   }
 
@@ -55,6 +61,8 @@
     object-position: 50% 50%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    max-width: 100%;
+    min-height: 100%;
     @media screen and (max-width: $breakpoint-tablet) {
       width: 100%;
       height: 100%;

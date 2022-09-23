@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import Link from 'next/link'
@@ -61,7 +61,7 @@ const variants2 = {
 
 const Layout = ({children} : {children: React.ReactNode}) => {
     
-   const [isOpen, toggleOpen] = useCycle(false, true);
+   const [isOpen, toggleOpen] = useState(false);
    const containerRef = useRef(null);
    const { height } = useDimensions(containerRef);
 
@@ -69,9 +69,9 @@ const Layout = ({children} : {children: React.ReactNode}) => {
    const link = [ "music", "photography", 'about']
 
     return (
-        <div className={styles.layout}>
+        <div className={styles.layout} >
             
-            <nav className={styles.container}>
+            <nav className={styles.container} >
             
             {/* mobile view */}
             <Link href='/'>
@@ -99,12 +99,12 @@ const Layout = ({children} : {children: React.ReactNode}) => {
  
                >
  
-                    <button  className={styles.textPlaceholder} >{links[i]}</button>
+                    <button  onClick={()=>toggleOpen(false)} className={styles.textPlaceholder} >{links[i]}</button>
                 </motion.li>
                 </Link>
             ))}
                 </motion.ul>
-                <MenuToggle toggle={() => toggleOpen()} />
+                <MenuToggle toggle={() => toggleOpen(!isOpen)} />
             </motion.nav>
 
             {/* desktop view */}
@@ -130,7 +130,7 @@ const Layout = ({children} : {children: React.ReactNode}) => {
             
             </nav>
 
-            <div className={styles.children}>
+            <div onClick={()=>toggleOpen(false)} className={styles.children}>
                 {children}
             </div>
         

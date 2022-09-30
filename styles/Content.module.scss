@@ -276,7 +276,7 @@
   // background-color: pink;
   display: flex;
   color: black;
-  margin-bottom: 40px;
+  margin: 80px 0px 80px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -291,6 +291,7 @@
 
   >h2 {
     text-align: center;
+    margin-top: 80px;
 
   }
 }

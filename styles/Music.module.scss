@@ -17,6 +17,7 @@
 .bannerImage {
     width: 100%;
     object-fit: cover;
+    
 }
 
 .bannerLogo {
@@ -35,12 +36,13 @@
 }
 
 .musicContent {
+    
 
-
-  width: 100%;
+    width: 100%;
     font-family: $fouthFont;
     line-height: 1.5rem;
     padding: 20px;
+    margin-top: 20px;
 
     >h1 {
         margin: 0;

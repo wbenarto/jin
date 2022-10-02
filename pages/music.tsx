@@ -17,7 +17,7 @@ function Music() {
 
                     <h1 className={styles2.white}>DJ JINN Music</h1>
                     <h2>San Francisco</h2>
-                    <p>Thanks for visiting my page and taking time to listen to the rhythms and beats I am able to share with you. Lover of all disco, funk, jazz, soul, and just good music in general, it is where we share and express our feelings and emotions through sound. Posting some of my live show recordings from www.cambrianradio.co.uk live every Sundays from 10AM-12PM Pacific / 6PM-8PM UK time. Feel free to interact with me on my Facebook page at www.facebook.com/djinn415. Available to spice up your events here in the Bay Area! </p>
+                    <p>Thanks for visiting my page and taking time to listen to the rhythms and beats I am able to share with you. Lover of all disco, funk, jazz, soul, and just good music in general, it is where we share and express our feelings and emotions through sound. Posting some of my live show recordings from www.cambrianradio.co.uk live every Sundays from 10AM-12PM Pacific / 6PM-8PM UK time. Feel free to interact with me on my <a href='https://www.facebook.com/djinn415'>Facebook</a>. Available to spice up your events here in the Bay Area! </p>
                 </div>
                 <div className={styles2.musicContent}>
                     <div className={styles2.socialLinks}><h3>Twitch</h3><a href='https://www.twitch.tv/djinn415'>https://www.twitch.tv/djinn415</a></div>

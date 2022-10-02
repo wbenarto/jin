@@ -6,7 +6,7 @@ import styles2 from '../styles/Content.module.css'
 
 //Scroll Observer
 import { useInView } from "react-intersection-observer"
-import { useAnimation, motion } from "framer-motion"
+import { useAnimation, motion,  } from "framer-motion"
 
 import Food from '../components/Food'
 import Travel from '../components/Travel'
@@ -17,6 +17,7 @@ const Photography = () => {
   const [active, setActive] = useState('food')
 
   const animation = useAnimation()
+
 
   const [contentRef, inView] = useInView({
     triggerOnce: true,
@@ -49,11 +50,15 @@ const Photography = () => {
     }
 
   }, [animation, inView])
+
+  useEffect(()=>{
+
+  }, [])
   return (
     <main>
 
       <div className={styles.photographyFilter}>
-        <button onClick={() => setActive('food')}>FOOD</button>
+        <button  onClick={() => setActive('food')}>FOOD</button>
         <button onClick={() => setActive('travel')}>LANDSCAPE</button>
         <button onClick={() => setActive('portrait')}>PORTRAIT</button>
         {/* <button onClick={() => setActive('wedding')}>WEDDING</button> */}
